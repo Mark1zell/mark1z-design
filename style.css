@@ -1457,3 +1457,81 @@ body, .mkz-site {
   font-weight: bold;
   color: #fff;
 }
+
+
+/* ========== МЕССЕНДЖЕР — ПОЛЕ ВВОДА ========== */
+.mkz-messenger-compose__box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.mkz-messenger-compose__field {
+  flex: 1;
+}
+
+.mkz-messenger-input {
+  width: 100%;
+  min-height: 44px;
+  resize: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  color: #fff;
+  font-size: 14px;
+}
+
+.mkz-messenger-send {
+  min-width: 90px;
+  width: auto;
+  padding: 0 20px;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff2fae, #7a3cff);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.mkz-messenger-attach {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Скрываем кнопку остановки записи */
+#mkzMessengerVoiceStopBtn {
+  display: none !important;
+}
+
+/* Группируем кнопки справа */
+.mkz-messenger-compose__box--final {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.mkz-messenger-compose__box--final .mkz-messenger-compose__field {
+  flex: 1;
+}
+
+.mkz-messenger-compose__box--final .mkz-messenger-attach,
+.mkz-messenger-compose__box--final .mkz-messenger-send {
+  margin-left: 0;
+}
