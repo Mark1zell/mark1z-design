@@ -1535,3 +1535,36 @@ body, .mkz-site {
 .mkz-messenger-compose__box--final .mkz-messenger-send {
   margin-left: 0;
 }
+
+
+/* ПЕРЕОПРЕДЕЛЯЕМ СТИЛИ МЕССЕНДЖЕРА */
+.mkz-messenger-compose__box {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+.mkz-messenger-compose__field {
+  flex: 1 !important;
+}
+
+.mkz-messenger-input {
+  width: 100% !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.mkz-messenger-send {
+  min-width: 90px !important;
+  height: 44px !important;
+  flex-shrink: 0 !important;
+}
+
+.mkz-messenger-attach {
+  flex-shrink: 0 !important;
+}
+
+#mkzMessengerVoiceStopBtn {
+  display: none !important;
+}
