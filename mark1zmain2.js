@@ -2422,7 +2422,7 @@ setTimeout(() => {
     }
   }
 
-  // ========== REAL-TIME ОБНОВЛЕНИЕ СПИСКА ДИАЛОГОВ ==========
+// ========== REAL-TIME ОБНОВЛЕНИЕ СПИСКА ДИАЛОГОВ ==========
 let realtimeSubscription = null;
 
 async function initRealtimeDialogs() {
@@ -2453,6 +2453,10 @@ async function initRealtimeDialogs() {
     }, async (payload) => {
       console.log('📨 Новое сообщение в чате:', payload.new.chat_id);
       await updateDialogLastMessage(payload.new.chat_id);
+      // Обновляем закреплённый чат, если это он
+      if (payload.new.chat_id === state.supportConversationId) {
+        await updatePinnedChat();
+      }
     })
     .on('postgres_changes', {
       event: 'UPDATE',
@@ -2493,6 +2497,31 @@ async function updateDialogLastMessage(chatId) {
   dialogElement.remove();
   const container = document.querySelector('.mkz-chat-list');
   if (container) container.prepend(dialogElement);
+}
+
+  async function updatePinnedChat() {
+  const supportChatId = state.supportConversationId;
+  if (!supportChatId) return;
+  
+  const { data: lastMsg } = await supabaseClient
+    .from('messages')
+    .select('content, created_at')
+    .eq('chat_id', supportChatId)
+    .order('created_at', { ascending: false })
+    .limit(1);
+  
+  const previewEl = document.getElementById('mkzPinnedOwnerPreview');
+  const timeEl = document.getElementById('mkzPinnedOwnerTime');
+  
+  if (lastMsg?.[0]) {
+    let preview = lastMsg[0].content || '📎 Вложение';
+    if (preview.length > 40) preview = preview.substring(0, 40) + '...';
+    if (previewEl) previewEl.textContent = preview;
+    if (timeEl) timeEl.textContent = formatDateTime(lastMsg[0].created_at);
+  } else {
+    if (previewEl) previewEl.textContent = 'Нет сообщений';
+    if (timeEl) timeEl.textContent = 'онлайн';
+  }
 }
 
 async function updateDialogUserInfo(userId) {
@@ -3374,7 +3403,9 @@ var newChatId = generateUUID();
     await fetchSessionAndProfile();
     await Promise.all([cacheProfiles(), renderPortfolio(), renderReviews(), renderNews(), renderFaqQuestions(), renderContestEntriesAdmin(), searchPeople(), renderMessengerDialogs()]);
     await loadUserBio();
-    bindStaticEvents();   
+    bindStaticEvents();
+    // Обновляем закреплённый чат
+    await updatePinnedChat();
     await initRealtimeDialogs();
     var msgContainer = document.getElementById('mkzMessengerMessages');
     if (msgContainer) msgContainer.style.overflowY = 'hidden';
