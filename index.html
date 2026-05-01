@@ -466,70 +466,72 @@
       </section>
     </section>
 
-    <!-- ========== ПУБЛИЧНЫЙ ПРОФИЛЬ ========== -->
-    <section class="mkz-screen" data-screen="profile" id="profile">
-      <section class="mkz-section">
-        <div class="mkz-container">
-          <div class="mkz-profile-view">
-            <div class="mkz-profile-hero" style="display: flex; flex-direction: column; gap: 20px;">
-  <!-- Верхняя часть: Profile и кнопки справа -->
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-    <div class="mkz-chip" style="margin-bottom: 0;">profile</div>
-    <div class="mkz-profile-actions" style="display: flex; gap: 12px;">
-      <button class="mkz-btn mkz-btn--primary" type="button" id="mkzOpenProfileMessengerBtn">Написать</button>
-      <button class="mkz-btn mkz-btn--ghost" type="button" id="mkzBackToPeopleBtn">Назад к поиску</button>
-    </div>
-  </div>
+<!-- ========== ПУБЛИЧНЫЙ ПРОФИЛЬ ========== -->
+<section class="mkz-screen" data-screen="profile" id="profile">
+  <section class="mkz-section">
+    <div class="mkz-container">
+      <div class="mkz-profile-view">
+        <div class="mkz-profile-hero" style="position: relative; padding: 28px;">
+          <!-- Chip "profile" на всю ширину -->
+          <div class="mkz-chip" style="margin-bottom: 20px; width: 100%;">profile</div>
 
-  <!-- Аватарка -->
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
-    <div class="mkz-profile-avatar" id="mkzPublicProfileAvatarWrap" style="width: 120px; height: 120px;">
-      <div class="mkz-profile-card__avatar" id="mkzPublicProfileAvatar" style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #ff2fae, #7a3cff); display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: bold; color: #fff;">U</div>
-    </div>
-    <div style="text-align: center;">
-      <h2 class="mkz-profile-name" id="mkzPublicProfileName" style="margin: 0; font-size: 28px;">Пользователь</h2>
-      <div class="mkz-profile-id" id="mkzPublicProfileId" style="color: #b29cff; margin-top: 4px;">#0000001</div>
-      <div class="mkz-profile-status" id="mkzPublicProfileStatus" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 4px 12px; background: rgba(255,255,255,0.05); border-radius: 20px;">🟢 Не в сети</div>
-    </div>
-  </div>
+          <!-- Аватарка + имя + кнопки -->
+          <div style="display: flex; align-items: flex-start; gap: 24px; flex-wrap: wrap;">
+            <!-- Аватарка (полуквадрат) -->
+            <div class="mkz-profile-avatar" id="mkzPublicProfileAvatarWrap" style="width: 140px; height: 140px; border-radius: 24px; overflow: hidden; background: linear-gradient(135deg, #ff2fae, #7a3cff); flex-shrink: 0;">
+              <div class="mkz-profile-card__avatar" id="mkzPublicProfileAvatar" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-size: cover !important; background-position: center !important; font-size: 56px; font-weight: bold; color: #fff;">U</div>
+            </div>
 
-  <!-- Индикаторы (факты) -->
-  <div class="mkz-profile-facts" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 8px;">
-    <div class="mkz-profile-fact" style="padding: 12px; background: rgba(255,255,255,0.03); border-radius: 16px;">
-      <span class="mkz-profile-fact__label" style="font-size: 11px; color: #cbbce6;">Дата регистрации</span>
-      <div class="mkz-profile-fact__value" id="mkzPublicProfileRegistered" style="font-size: 14px;">—</div>
-    </div>
-    <div class="mkz-profile-fact" style="padding: 12px; background: rgba(255,255,255,0.03); border-radius: 16px;">
-      <span class="mkz-profile-fact__label" style="font-size: 11px; color: #cbbce6;">Телефон</span>
-      <div class="mkz-profile-fact__value" id="mkzPublicProfilePhone" style="font-size: 14px;">Телефон скрыт</div>
-    </div>
-    <div class="mkz-profile-fact" style="padding: 12px; background: rgba(255,255,255,0.03); border-radius: 16px;">
-      <span class="mkz-profile-fact__label" style="font-size: 11px; color: #cbbce6;">Telegram</span>
-      <div class="mkz-profile-fact__value" id="mkzPublicProfileTelegram" style="font-size: 14px;">Telegram скрыт</div>
-    </div>
-  </div>
-</div>
+            <!-- Информация -->
+            <div style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+                <div>
+                  <h2 class="mkz-profile-name" id="mkzPublicProfileName" style="margin: 0; font-size: 32px;">Пользователь</h2>
+                  <div class="mkz-profile-id" id="mkzPublicProfileId" style="color: #b29cff; margin-top: 6px;">#0000001</div>
+                  <div class="mkz-profile-status" id="mkzPublicProfileStatus" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;">🟢 Не в сети</div>
+                </div>
+                <div class="mkz-profile-actions" style="display: flex; gap: 12px;">
+                  <button class="mkz-btn mkz-btn--primary" type="button" id="mkzOpenProfileMessengerBtn">Написать</button>
+                  <button class="mkz-btn mkz-btn--ghost" type="button" id="mkzBackToPeopleBtn">Назад к поиску</button>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="mkz-profile-grid">
-              <div class="mkz-profile-card">
-                <div class="mkz-profile-card__label">О пользователе</div>
-                <h3 class="mkz-profile-card__title">Описание профиля</h3>
-                <div class="mkz-profile-card__text" id="mkzPublicProfileBio">Описание профиля пока не заполнено.</div>
-              </div>
-
-              <div class="mkz-profile-card">
-                <div class="mkz-profile-card__label">Активность</div>
-                <h3 class="mkz-profile-card__title">Статистика</h3>
-                <div id="mkzPublicProfileActivity"></div>
-              </div>
+          <!-- Индикаторы (факты) -->
+          <div class="mkz-profile-facts" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px;">
+            <div class="mkz-profile-fact" style="padding: 14px 16px; background: rgba(255,255,255,0.03); border-radius: 20px;">
+              <span class="mkz-profile-fact__label">Дата регистрации</span>
+              <div class="mkz-profile-fact__value" id="mkzPublicProfileRegistered">—</div>
+            </div>
+            <div class="mkz-profile-fact" style="padding: 14px 16px; background: rgba(255,255,255,0.03); border-radius: 20px;">
+              <span class="mkz-profile-fact__label">Телефон</span>
+              <div class="mkz-profile-fact__value" id="mkzPublicProfilePhone">Телефон скрыт</div>
+            </div>
+            <div class="mkz-profile-fact" style="padding: 14px 16px; background: rgba(255,255,255,0.03); border-radius: 20px;">
+              <span class="mkz-profile-fact__label">Telegram</span>
+              <div class="mkz-profile-fact__value" id="mkzPublicProfileTelegram">Telegram скрыт</div>
             </div>
           </div>
         </div>
-      </section>
-    </section>
+
+        <div class="mkz-profile-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px;">
+          <div class="mkz-profile-card">
+            <div class="mkz-profile-card__label">О пользователе</div>
+            <h3 class="mkz-profile-card__title">Описание профиля</h3>
+            <div class="mkz-profile-card__text" id="mkzPublicProfileBio">Описание профиля пока не заполнено.</div>
+          </div>
+
+          <div class="mkz-profile-card">
+            <div class="mkz-profile-card__label">Активность</div>
+            <h3 class="mkz-profile-card__title">Статистика</h3>
+            <div id="mkzPublicProfileActivity"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
 
     <!-- ========== МЕССЕНДЖЕР ========== -->
     <section class="mkz-screen" data-screen="messenger" id="messenger">
