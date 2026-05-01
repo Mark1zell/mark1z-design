@@ -1623,3 +1623,20 @@ body, .mkz-site {
   border-radius: 28px;
   box-shadow: var(--shadow);
 }
+
+
+
+
+/* Статус онлайн/офлайн */
+.mkz-profile-status.online span:first-child {
+  background: #22c55e !important;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+}
+
+.mkz-profile-status.recent span:first-child {
+  background: #f97316 !important;
+}
+
+.mkz-profile-status.offline span:first-child {
+  background: #64748b !important;
+}
