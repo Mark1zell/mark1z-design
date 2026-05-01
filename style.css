@@ -1570,61 +1570,6 @@ body, .mkz-site {
 }
 
 
-/* Аватарка в профиле */
-.mkz-profile-avatar {
-  width: 120px !important;
-  height: 120px !important;
-  border-radius: 50% !important;
-  overflow: hidden;
-  background: linear-gradient(135deg, #ff2fae, #7a3cff);
-}
-
-.mkz-profile-card__avatar {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover !important;
-  background-position: center !important;
-  font-size: 48px;
-  font-weight: bold;
-  color: #fff;
-}
-
-
-
-
-.mkz-profile-avatar {
-  width: 140px !important;
-  height: 140px !important;
-  border-radius: 24px !important;
-  overflow: hidden;
-  background: linear-gradient(135deg, #ff2fae, #7a3cff);
-}
-
-.mkz-profile-card__avatar {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover !important;
-  background-position: center !important;
-  font-size: 56px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.mkz-profile-hero {
-  position: relative;
-  background: linear-gradient(180deg, rgba(20,12,38,.96), rgba(8,6,20,.98));
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 28px;
-  box-shadow: var(--shadow);
-}
-
-
 
 
 /* Статус онлайн/офлайн */
