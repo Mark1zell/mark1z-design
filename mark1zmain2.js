@@ -2583,7 +2583,18 @@ async function checkIfHaveChatWithUser(userId) {
         var author = getMessageAuthorIdentity(msg);
         authorName = '<div class="mkz-message__title">' + escapeHtml(author?.username || 'Пользователь') + '</div>';
       }
-
+        // Аватарка для сообщений собеседника
+  var avatarHtml = '';
+  if (!isMine && msg.sender_id) {
+    var senderProfile = state.allProfilesCache.find(function(p) { return p.id === msg.sender_id; });
+    var avatarUrl = senderProfile?.avatar_url || '';
+    if (avatarUrl) {
+      avatarHtml = '<div class="mkz-message__avatar" style="background-image: url(\'' + avatarUrl + '\'); background-size: cover; background-position: center;"></div>';
+    } else {
+      var initial = getInitial(senderProfile?.username || 'П');
+      avatarHtml = '<div class="mkz-message__avatar" style="background: linear-gradient(135deg, #ff2fae, #7a3cff); display: flex; align-items: center; justify-content: center; font-weight: bold;">' + initial + '</div>';
+    }
+  }
       var rowClass = isMine ? 'mkz-message-row--me' : 'mkz-message-row--them';
       var msgClass = isMine ? 'mkz-message--me' : 'mkz-message--them';
 
@@ -2602,19 +2613,22 @@ async function checkIfHaveChatWithUser(userId) {
         }
       }
 
-           var senderName = '';
+      var senderName = '';
       if (!isMine) {
         var senderProfile = state.allProfilesCache.find(function(p) { return p.id === msg.sender_id; });
         senderName = '<div class="mkz-message__title">' + escapeHtml(senderProfile?.username || 'Пользователь') + '</div>';
       }
+      
       return '<div class="mkz-message-row ' + rowClass + '">' +
-        '<div class="mkz-message ' + msgClass + '" data-message-id="' + msg.id + '">' +
-          senderName +
-          (content ? '<div class="mkz-message__text">' + content + '</div>' : '') +
-          attachmentHtml +
-          '<div class="mkz-message__footer">' +
-            '<span class="mkz-message__time">' + time + edited + pending + '</span>' +
-            (isMine && !msg._pending ? '<span class="mkz-message__actions"><button class="mkz-message__icon-btn" data-edit-message="' + msg.id + '" title="Редактировать"><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></button><button class="mkz-message__icon-btn" data-delete-message="' + msg.id + '" title="Удалить"><svg viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg></button></span>' : '') +
+        '<div class="mkz-message ' + msgClass + '" data-message-id="' + msg.id + '" style="display: flex; flex-direction: row; align-items: flex-start;">' +
+          avatarHtml +
+          '<div style="flex: 1;">' +
+            senderName +
+            (content ? '<div class="mkz-message__text">' + content + '</div>' : '') +
+            attachmentHtml +
+            '<div class="mkz-message__footer">' +
+              '<span class="mkz-message__time">' + time + edited + pending + '</span>' +
+            '</div>' +
           '</div>' +
         '</div>' +
       '</div>';
