@@ -617,28 +617,22 @@
               </div>
 
               <form class="mkz-messenger-compose" id="mkzMessengerForm">
-                <div class="mkz-messenger-compose__box mkz-messenger-compose__box--final">
-                  <input type="file" id="mkzMessengerImageInput" accept="image/*" hidden>
-                  <input type="file" id="mkzMessengerFileInput" hidden>
+  <div class="mkz-messenger-compose__box mkz-messenger-compose__box--final" style="display: flex; align-items: center; gap: 8px; width: 100%;">
+    <input type="file" id="mkzMessengerImageInput" accept="image/*" hidden>
+    <input type="file" id="mkzMessengerFileInput" hidden>
 
-                  <button class="mkz-messenger-attach mkz-messenger-attach--file" type="button" id="mkzMessengerAttachFileBtn" title="Прикрепить файл">📎</button>
+    <button class="mkz-messenger-attach mkz-messenger-attach--file" type="button" id="mkzMessengerAttachFileBtn" title="Прикрепить файл" style="width: 44px; height: 44px; flex-shrink: 0;">📎</button>
 
-                  <div class="mkz-messenger-compose__field">
-                    <textarea
-                      id="mkzMessengerInput"
-                      class="mkz-messenger-input"
-                      placeholder="Напиши сообщение..."
-                    ></textarea>
-                  </div>
+    <div class="mkz-messenger-compose__field" style="flex: 1;">
+      <textarea id="mkzMessengerInput" class="mkz-messenger-input" placeholder="Напиши сообщение..." style="width: 100%; margin: 0; box-sizing: border-box;"></textarea>
+    </div>
 
-                  <button class="mkz-messenger-attach mkz-messenger-attach--voice" type="button" id="mkzMessengerVoiceBtn" title="Записать голосовое">🎤</button>
-                  <button class="mkz-messenger-attach mkz-messenger-attach--stop" type="button" id="mkzMessengerVoiceStopBtn" title="Остановить запись">⏹</button>
-
-                  <button class="mkz-messenger-send" type="submit" id="mkzMessengerSendBtn">Отправить</button>
-                </div>
-
-                <div class="mkz-news-composer__meta" id="mkzMessengerAttachMeta"></div>
-              </form>
+    <button class="mkz-messenger-attach mkz-messenger-attach--voice" type="button" id="mkzMessengerVoiceBtn" title="Записать голосовое" style="width: 44px; height: 44px; flex-shrink: 0;">🎤</button>
+    
+    <button class="mkz-messenger-send" type="submit" id="mkzMessengerSendBtn" style="min-width: 90px; height: 44px; flex-shrink: 0; background: linear-gradient(135deg, #ff2fae, #7a3cff); border: none; border-radius: 12px; color: #fff; font-weight: bold; cursor: pointer;">Отправить</button>
+  </div>
+  <div class="mkz-news-composer__meta" id="mkzMessengerAttachMeta"></div>
+</form>
             </section>
           </div>
         </div>
