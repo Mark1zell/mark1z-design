@@ -1877,3 +1877,13 @@ body, .mkz-site {
 .mkz-footer {
   margin-top: auto;
 }
+
+
+
+
+
+
+/* Скрываем кнопку "Друзья" только в мессенджере */
+#messenger .mkz-bottom-nav__item[data-screen-open="people"] {
+  display: none;
+}
