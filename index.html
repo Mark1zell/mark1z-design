@@ -958,6 +958,37 @@
     <button class="mkz-bottom-nav__item mkz-admin-only" id="mkzParticipantsBottomBtn" data-screen-open="participants" type="button" style="display:none;">Участники</button>
   </nav>
 </section>
+  <style>
+  #people {
+    min-height: calc(100vh - 180px);
+  }
+  .mkz-footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+
+  <style>
+  /* Прижимаем подвал к низу на всех страницах */
+  .mkz-site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .mkz-main {
+    flex: 1;
+  }
+  
+  #people {
+    min-height: auto;
+  }
+  
+  .mkz-footer {
+    margin-top: auto;
+  }
+</style>
 
 <script src="mark1zmain2.js"></script>
 </body>
