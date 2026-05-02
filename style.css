@@ -1585,3 +1585,41 @@ body, .mkz-site {
 .mkz-profile-status.offline span:first-child {
   background: #64748b !important;
 }
+
+
+
+/* Аватарка в профиле */
+.mkz-profile-avatar {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 24px !important;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff2fae, #7a3cff);
+}
+
+.mkz-profile-card__avatar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover !important;
+  background-position: center !important;
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Статус с цветным индикатором */
+.mkz-profile-status.online span:first-child {
+  background: #22c55e !important;
+  box-shadow: 0 0 6px #22c55e;
+}
+
+.mkz-profile-status.recent span:first-child {
+  background: #f97316 !important;
+}
+
+.mkz-profile-status.offline span:first-child {
+  background: #64748b !important;
+}
