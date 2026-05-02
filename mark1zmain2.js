@@ -1334,7 +1334,49 @@ async function renderPortfolio() {
 
     if (publicProfileName) publicProfileName.textContent = profile.username || 'Пользователь';
     if (publicProfileId) publicProfileId.textContent = publicId;
-    if (publicProfileStatus) publicProfileStatus.textContent = getVisibleLastSeen(profile);
+    // Обновляем статус с цветным индикатором
+const statusContainer = document.getElementById('mkzPublicProfileStatus');
+if (statusContainer && profile) {
+  const indicator = statusContainer.querySelector('.status-indicator');
+  const statusTextEl = statusContainer.querySelector('.status-text');
+  
+  if (!indicator || !statusTextEl) return;
+  
+  if (profile.is_online) {
+    indicator.className = 'status-indicator online';
+    statusTextEl.textContent = 'В сети';
+  } else if (profile.last_seen_at) {
+    const lastSeen = new Date(profile.last_seen_at);
+    const now = new Date();
+    const diffDays = Math.floor((now - lastSeen) / (1000 * 60 * 60 * 24));
+    const diffHours = Math.floor((now - lastSeen) / (1000 * 60 * 60));
+    const diffMins = Math.floor((now - lastSeen) / (1000 * 60));
+    
+    if (diffMins < 5) {
+      indicator.className = 'status-indicator online';
+      statusTextEl.textContent = 'В сети';
+    } else if (diffHours < 24) {
+      indicator.className = 'status-indicator recent';
+      if (diffHours === 0) {
+        statusTextEl.textContent = `Был(а) ${diffMins} мин. назад`;
+      } else {
+        statusTextEl.textContent = `Был(а) ${diffHours} ч. назад`;
+      }
+    } else if (diffDays === 1) {
+      indicator.className = 'status-indicator recent';
+      statusTextEl.textContent = 'Был(а) вчера';
+    } else if (diffDays < 7) {
+      indicator.className = 'status-indicator offline';
+      statusTextEl.textContent = `Был(а) ${diffDays} дня назад`;
+    } else {
+      indicator.className = 'status-indicator long';
+      statusTextEl.textContent = `Был(а) ${diffDays} дней назад`;
+    }
+  } else {
+    indicator.className = 'status-indicator offline';
+    statusTextEl.textContent = 'Статус скрыт';
+  }
+}
     if (publicProfileRegistered) publicProfileRegistered.textContent = formatDateOnly(profile.created_at);
     if (publicProfilePhone) publicProfilePhone.textContent = getVisiblePhone(profile);
     if (publicProfileTelegram) publicProfileTelegram.textContent = getVisibleTelegram(profile);
