@@ -1562,6 +1562,13 @@ async function findExistingConversation(userId) {
 
   // ========== РЕНДЕР СПИСКА ДИАЛОГОВ ==========
 async function renderMessengerDialogs() {
+  // НЕ РЕНДЕРИМ ДИАЛОГИ, ЕСЛИ МЫ НЕ В МЕССЕНДЖЕРЕ
+  const activeScreen = document.querySelector('.mkz-screen--active');
+  if (!activeScreen || activeScreen.id !== 'messenger') {
+    console.log('Пропускаем рендер диалогов: активный экран не messenger');
+    return;
+  }
+  
   if (!messengerDialogs) return;
   if (!state.currentSession?.user) {
     messengerDialogs.innerHTML = '<div class="mkz-card"><p>Войдите в аккаунт, чтобы видеть диалоги.</p></div>';
