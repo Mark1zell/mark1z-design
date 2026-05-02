@@ -1877,3 +1877,32 @@ body, .mkz-site {
 .mkz-footer {
   margin-top: auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Скрываем элементы поиска людей на всех страницах, кроме "Найти друзей" */
+#home .mkz-people-search,
+#home .mkz-people-grid,
+#portfolio .mkz-people-search,
+#portfolio .mkz-people-grid,
+#reviews .mkz-people-search,
+#reviews .mkz-people-grid,
+#feed .mkz-people-search,
+#feed .mkz-people-grid,
+#faq .mkz-people-search,
+#faq .mkz-people-grid,
+#messenger .mkz-people-search,
+#messenger .mkz-people-grid,
+#account .mkz-people-search,
+#account .mkz-people-grid {
+  display: none !important;
+}
