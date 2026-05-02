@@ -1854,3 +1854,26 @@ body, .mkz-site {
   height: auto;
   align-self: stretch;
 }
+
+
+
+
+
+
+
+
+
+/* Фикс для страницы "Найти друзей" */
+#people {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+}
+
+#people .mkz-section {
+  flex: 1;
+}
+
+.mkz-footer {
+  margin-top: auto;
+}
