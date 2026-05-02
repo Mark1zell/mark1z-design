@@ -1623,3 +1623,29 @@ body, .mkz-site {
 .mkz-profile-status.offline span:first-child {
   background: #64748b !important;
 }
+
+
+
+
+
+
+.mkz-profile-avatar {
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 24px !important;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff2fae, #7a3cff);
+}
+
+.mkz-profile-card__avatar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover !important;
+  background-position: center !important;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
