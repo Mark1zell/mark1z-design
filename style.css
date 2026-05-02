@@ -1818,3 +1818,39 @@ body, .mkz-site {
   justify-content: center !important;
   text-align: center !important;
 }
+
+
+
+
+
+
+
+
+.mkz-profile-avatar {
+  width: 200px !important;
+  border-radius: 32px !important;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff2fae, #7a3cff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mkz-profile-card__avatar {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover !important;
+  background-position: center !important;
+  font-size: 80px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Чтобы высота аватарки равнялась высоте правого блока */
+.mkz-profile-hero .mkz-profile-avatar {
+  height: auto;
+  align-self: stretch;
+}
