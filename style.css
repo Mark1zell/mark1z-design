@@ -1623,3 +1623,16 @@ body, .mkz-site {
 .mkz-profile-status.offline span:first-child {
   background: #64748b !important;
 }
+
+
+
+/* Показываем блок поиска людей ТОЛЬКО на странице "Найти друзей" */
+.mkz-people-search,
+.mkz-people-grid {
+  display: none !important;
+}
+
+#people .mkz-people-search,
+#people .mkz-people-grid {
+  display: block !important;
+}
