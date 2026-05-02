@@ -472,18 +472,18 @@
     <div class="mkz-container">
       <div class="mkz-profile-view" style="background: linear-gradient(180deg, rgba(20,12,38,.96), rgba(8,6,20,.98)); border: 1px solid rgba(255,255,255,.08); border-radius: 32px; padding: 36px;">
 
-        <!-- Строка 1: Аватарка | PROFILE + кнопки -->
-        <div style="display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap;">
-          <!-- Аватарка (очень большая) -->
-          <div class="mkz-profile-avatar" id="mkzPublicProfileAvatarWrap" style="width: 180px; height: 180px; border-radius: 36px; overflow: hidden; background: linear-gradient(135deg, #ff2fae, #7a3cff); flex-shrink: 0;">
-            <div class="mkz-profile-card__avatar" id="mkzPublicProfileAvatar" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-size: cover !important; background-position: center !important; font-size: 72px; font-weight: bold; color: #fff;">N</div>
+        <!-- Аватарка + информация справа (аватарка по высоте до низа статуса) -->
+        <div style="display: flex; gap: 32px; align-items: stretch; flex-wrap: wrap;">
+          <!-- Аватарка (ещё больше) -->
+          <div class="mkz-profile-avatar" id="mkzPublicProfileAvatarWrap" style="width: 200px; height: auto; border-radius: 36px; overflow: hidden; background: linear-gradient(135deg, #ff2fae, #7a3cff); flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
+            <div class="mkz-profile-card__avatar" id="mkzPublicProfileAvatar" style="width: 200px; height: 200px; display: flex; align-items: center; justify-content: center; background-size: cover !important; background-position: center !important; font-size: 80px; font-weight: bold; color: #fff;">G</div>
           </div>
 
           <!-- Правая часть: PROFILE + имя + ID + статус + кнопки -->
-          <div style="flex: 1;">
-            <!-- PROFILE (справа от аватарки) -->
+          <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <!-- Верх: PROFILE (по центру своего овала) и кнопки -->
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
-              <div class="mkz-chip" style="display: inline-block; padding: 6px 24px;">PROFILE</div>
+              <div class="mkz-chip" style="display: inline-flex; align-items: center; justify-content: center; padding: 6px 24px; text-align: center;">PROFILE</div>
               <div style="display: flex; gap: 12px;">
                 <button class="mkz-btn mkz-btn--primary" type="button" id="mkzOpenProfileMessengerBtn" style="padding: 8px 20px; font-size: 14px;">Написать</button>
                 <button class="mkz-btn mkz-btn--ghost" type="button" id="mkzBackToPeopleBtn" style="padding: 8px 20px; font-size: 14px;">Назад к поиску</button>
@@ -491,35 +491,35 @@
             </div>
 
             <!-- Имя и ID -->
-            <h2 class="mkz-profile-name" id="mkzPublicProfileName" style="margin: 0 0 6px 0; font-size: 36px;">Nikita</h2>
-            <div class="mkz-profile-id" id="mkzPublicProfileId" style="color: #b29cff; font-size: 16px; margin-bottom: 14px;">#1156670</div>
+            <h2 class="mkz-profile-name" id="mkzPublicProfileName" style="margin: 0 0 6px 0; font-size: 36px;">ghagoand</h2>
+            <div class="mkz-profile-id" id="mkzPublicProfileId" style="color: #b29cff; font-size: 16px; margin-bottom: 14px;">#8753787</div>
 
             <!-- Статус с цветным индикатором -->
             <div class="mkz-profile-status" id="mkzPublicProfileStatus" style="display: flex; align-items: center; gap: 8px;">
               <span class="status-indicator" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%;"></span>
-              <span class="status-text">Был(а) 1 день назад</span>
+              <span class="status-text">Был(а) 9 ч. назад</span>
             </div>
           </div>
         </div>
 
-        <!-- Три овала (под аватаркой, но выше, чем было) -->
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px;">
-          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 60px; padding: 14px 20px; text-align: center;">
+        <!-- Три овала (чуть меньше, но больше середины) -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px;">
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 60px; padding: 14px 16px; text-align: center; max-width: 85%; margin: 0 auto; width: 100%;">
             <div style="font-size: 11px; color: #cbbce6; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">ДАТА РЕГИСТРАЦИИ</div>
-            <div style="font-size: 15px; font-weight: 500;" id="mkzPublicProfileRegistered">30.04.2026</div>
+            <div style="font-size: 14px; font-weight: 500;" id="mkzPublicProfileRegistered">30.04.2026</div>
           </div>
-          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 60px; padding: 14px 20px; text-align: center;">
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 60px; padding: 14px 16px; text-align: center; max-width: 85%; margin: 0 auto; width: 100%;">
             <div style="font-size: 11px; color: #cbbce6; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">ТЕЛЕФОН</div>
-            <div style="font-size: 15px; font-weight: 500;" id="mkzPublicProfilePhone">Телефон не указан</div>
+            <div style="font-size: 14px; font-weight: 500;" id="mkzPublicProfilePhone">+79168693842</div>
           </div>
-          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 60px; padding: 14px 20px; text-align: center;">
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 60px; padding: 14px 16px; text-align: center; max-width: 85%; margin: 0 auto; width: 100%;">
             <div style="font-size: 11px; color: #cbbce6; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">TELEGRAM</div>
-            <div style="font-size: 15px; font-weight: 500;" id="mkzPublicProfileTelegram">Telegram не указан</div>
+            <div style="font-size: 14px; font-weight: 500;" id="mkzPublicProfileTelegram">@ghagoand</div>
           </div>
         </div>
 
-        <!-- Две колонки (описание и статистика) — подняты выше -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px;">
+        <!-- Две колонки -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px;">
           <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 22px;">
             <div style="font-size: 12px; color: #cbbce6; margin-bottom: 12px;">О ПОЛЬЗОВАТЕЛЕ</div>
             <h3 style="font-size: 18px; margin: 0 0 12px 0;">Описание профиля</h3>
