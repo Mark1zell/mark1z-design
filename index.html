@@ -566,30 +566,16 @@
                 </div>
 
 <div class="mkz-messenger-pinned" id="mkzMessengerPinnedOwner">
-  <div class="mkz-messenger-pinned__label">📌 Закреплённый чат</div>
-  <button type="button" class="mkz-dialog" id="mkzPinnedOwnerChatBtn" style="
-    width: 100%;
-    padding: 14px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, rgba(255,47,174,0.08), rgba(122,60,255,0.08));
-    border: 1px solid rgba(255,47,174,0.3);
-    text-align: left;
-    cursor: pointer;
-    margin-bottom: 8px;
-  ">
+  <!-- Овальная метка над Mark1z Design -->
+  <div style="display: flex; justify-content: center; margin-bottom: 6px;">
+    <div style="background: rgba(255,47,174,0.15); border: 1px solid rgba(255,47,174,0.3); border-radius: 60px; padding: 4px 16px; display: inline-block;">
+      <span style="font-size: 10px; color: #ff2fae; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500;">📌 Закреплённый чат</span>
+    </div>
+  </div>
+  
+  <button type="button" class="mkz-dialog" id="mkzPinnedOwnerChatBtn" style="width: 100%; padding: 14px; border-radius: 16px; background: linear-gradient(135deg, rgba(255,47,174,0.08), rgba(122,60,255,0.08)); border: 1px solid rgba(255,47,174,0.3); text-align: left; cursor: pointer; margin-bottom: 8px;">
     <div style="display: flex; align-items: center; gap: 12px;">
-      <div class="mkz-dialog__avatar" id="mkzPinnedOwnerAvatar" style="
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #ff2fae, #7a3cff);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 18px;
-        color: #fff;
-      ">M</div>
+      <div class="mkz-dialog__avatar" id="mkzPinnedOwnerAvatar" style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #ff2fae, #7a3cff); display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 18px; color: #fff;">M</div>
       <div style="flex: 1; min-width: 0;">
         <div style="display: flex; justify-content: space-between; align-items: baseline;">
           <span style="font-weight: 600; color: #fff;">Mark1z Design</span>
@@ -629,31 +615,6 @@
                      <div style="font-size:18px;font-weight:600;color:#fff;margin-bottom:8px;">Ваши чаты</div>
                     <div style="font-size:14px;">Выберите диалог слева или найдите друга чтобы начать общение</div>
                   </div>
-                </div>
-
-              <!-- ПЕРЕКЛЮЧАТЕЛЬ РЕЖИМОВ ОТПРАВКИ (ДЛЯ АДМИНА) -->
-              <div id="mkzSupportModeSelector" class="mkz-support-mode-selector" style="display: none;">
-                <div class="mkz-support-mode-title">
-                  <span>🤖 Режим ответа</span>
-                </div>
-                <div class="mkz-support-mode-buttons">
-                  <button class="mkz-mode-btn mkz-mode-btn--brand is-active" data-mode="brand" id="mkzModeBrandBtn">
-                    <span>🏢</span>
-                    <div>
-                      <strong>Mark1z Design</strong>
-                      <small>Виден всем</small>
-                    </div>
-                  </button>
-                  <button class="mkz-mode-btn mkz-mode-btn--admin" data-mode="admin" id="mkzModeAdminBtn">
-                    <span>👤</span>
-                    <div>
-                      <strong>Админ (личное)</strong>
-                      <small>Только для админов</small>
-                    </div>
-                  </button>
-                </div>
-                <div class="mkz-support-mode-hint" id="mkzModeHint">
-                  💡 Посетители видят только сообщения от Mark1z Design
                 </div>
               </div>
 
