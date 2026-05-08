@@ -1771,3 +1771,36 @@ body, .mkz-site {
 #mkzMessengerVoiceStopBtn {
   display: none !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Аккаунт — правильные цвета */
+.mkz-account-side {
+  color: #fff;
+}
+
+.mkz-account-side .mkz-profile-fact__value {
+  color: #fff !important;
+}
+
+.mkz-account-side .mkz-profile-fact__label {
+  color: #cbbce6 !important;
+}
+
+.mkz-profile-description label {
+  color: #fff !important;
+}
+
+.mkz-profile-description textarea {
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e2e8f0;
+}
