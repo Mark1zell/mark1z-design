@@ -673,187 +673,183 @@
       </section>
     </section>
 
-    <!-- ========== АККАУНТ ========== -->
-    <section class="mkz-screen" data-screen="account" id="account">
-      <section class="mkz-section">
-        <div class="mkz-container mkz-account-layout">
-          <div class="mkz-account-side">
-            <div class="mkz-chip">account</div>
-            <h2>Аккаунт</h2>
-            
-            <!-- Мини-профиль -->
-            <div class="mkz-person-card" style="margin-bottom:16px;display:flex;align-items:center;gap:14px;padding:18px;border-radius:24px;background:linear-gradient(180deg,rgba(20,12,38,.96),rgba(8,6,20,.98));border:1px solid rgba(255,255,255,.08);">
-              <div class="mkz-person-card__avatar" id="mkzAccountMiniAvatar" style="width:70px;height:70px;border-radius:22px;background:linear-gradient(135deg,#ff3bd4,#8b5cff);display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;font-weight:800;background-size:cover;background-position:center;flex-shrink:0;">M</div>
-              <div class="mkz-person-card__meta" style="min-width:0;">
-                <div class="mkz-person-card__name" id="mkzAccountMiniName" style="font-size:22px;font-weight:800;color:#fff;">Гость</div>
-                <div class="mkz-person-card__id" id="mkzAccountMiniId" style="margin-top:6px;color:#b29cff;font-size:15px;font-weight:700;">ID: —</div>
-                <div class="mkz-person-card__status" id="mkzAccountMiniStatus" style="margin-top:8px;font-size:14px;color:rgba(255,255,255,.68);">Не в сети</div>
-              </div>
-            </div>
+<!-- ========== АККАУНТ ========== -->
+<section class="mkz-screen" data-screen="account" id="account">
+  <section class="mkz-section">
+    <div class="mkz-container mkz-account-layout">
+      <div class="mkz-account-side">
+        <div class="mkz-chip">account</div>
+        <h2>Аккаунт</h2>
 
-            <!-- Данные профиля -->
-            <div class="mkz-profile-facts" style="margin-bottom:16px;">
-              <div class="mkz-profile-fact">
-                <span class="mkz-profile-fact__label">Дата регистрации</span>
-                <div class="mkz-profile-fact__value" id="mkzAccountRegistered">—</div>
-              </div>
-              <div class="mkz-profile-fact">
-                <span class="mkz-profile-fact__label">Телефон</span>
-                <div class="mkz-profile-fact__value" id="mkzAccountPhone">—</div>
-              </div>
-              <div class="mkz-profile-fact">
-                <span class="mkz-profile-fact__label">Telegram</span>
-                <div class="mkz-profile-fact__value" id="mkzAccountTelegram">—</div>
-              </div>
-            </div>
-
-            <!-- Описание профиля -->
-            <div class="mkz-profile-description">
-              <label>📝 Описание профиля</label>
-              <textarea id="mkzUpdateBio" placeholder="Расскажите о себе..."></textarea>
-              <button id="mkzUpdateBioBtn" class="mkz-btn mkz-btn--primary" style="margin-top: 12px;">Сохранить описание</button>
-            </div>
-
-            <!-- Статистика -->
-            <div class="mkz-profile-stats" style="margin-bottom:16px;">
-              <div class="mkz-profile-stat"><strong>0</strong><span>Отзывов</span></div>
-              <div class="mkz-profile-stat"><strong>0</strong><span>Комментариев</span></div>
-            </div>
-          </div>
-
-          <div class="mkz-form-card">
-            <div id="mkzAuthBlock">
-              <div class="mkz-auth-switch">
-                <button class="mkz-sort-btn is-active" id="mkzShowLogin" type="button">Вход</button>
-                <button class="mkz-sort-btn" id="mkzShowRegister" type="button">Регистрация</button>
-              </div>
-
-              <form id="mkzLoginForm" class="mkz-form">
-                <label class="mkz-field">
-                  <span>Email</span>
-                  <input type="email" id="mkzLoginEmail" autocomplete="email" required>
-                </label>
-                <label class="mkz-field">
-                  <span>Пароль</span>
-                  <input type="password" id="mkzLoginPassword" autocomplete="current-password" required>
-                </label>
-                <button class="mkz-btn mkz-btn--primary mkz-btn--block" type="submit" id="mkzLoginBtn">Войти</button>
-              </form>
-
-              <form id="mkzRegisterForm" class="mkz-form" style="display:none;">
-                <label class="mkz-field">
-                  <span>Email</span>
-                  <input type="email" id="mkzRegisterEmail" autocomplete="email" required>
-                </label>
-                <label class="mkz-field">
-                  <span>Пароль</span>
-                  <input type="password" id="mkzRegisterPassword" autocomplete="new-password" required>
-                </label>
-                <label class="mkz-field">
-                  <span>Никнейм</span>
-                  <input type="text" id="mkzNameInput" autocomplete="username" required>
-                </label>
-                <label class="mkz-field">
-                  <span>Телефон</span>
-                  <input type="text" id="mkzPhoneInput" autocomplete="tel">
-                </label>
-
-                <!-- ПОЛЯ ДЛЯ TELEGRAM И VK -->
-                <div class="mkz-social-inputs">
-                  <div class="mkz-field">
-                    <span>📱 Telegram username</span>
-                    <input type="text" id="mkzTelegramInput" placeholder="@username или username">
-                    <small>Укажите ваш Telegram username</small>
-                  </div>
-                  <div class="mkz-field">
-                    <span>📘 ВКонтакте</span>
-                    <input type="text" id="mkzVkUsername" placeholder="https://vk.com/id123 или username">
-                    <small>Ссылка на страницу или ID</small>
-                  </div>
-                </div>
-                <div id="mkzSocialError" class="mkz-social-error"></div>
-
-                <label class="mkz-field">
-                  <span>Аватарка</span>
-                  <input type="file" id="mkzAvatarInput" accept="image/*">
-                </label>
-                <button class="mkz-btn mkz-btn--primary mkz-btn--block" type="submit" id="mkzRegisterBtn">Зарегистрироваться</button>
-              </form>
-            </div>
-
-            <div class="mkz-profile-preview" id="mkzProfilePreview">
-              <div class="mkz-profile-preview__avatar" id="mkzPreviewAvatar">M</div>
-              <div class="mkz-profile-preview__label">Активный профиль</div>
-              <div class="mkz-profile-preview__name" id="mkzPreviewName">Гость</div>
-              <div class="mkz-profile-preview__phone" id="mkzPreviewPhone">Не авторизован</div>
-              <div class="mkz-profile-preview__phone" id="mkzPreviewUserId">ID: —</div>
-            </div>
-
-            <div class="mkz-account-actions" id="mkzAccountActions" style="display:none;">
-              <label class="mkz-field">
-                <span>Обновить никнейм</span>
-                <input type="text" id="mkzUpdateName" autocomplete="username">
-              </label>
-              <label class="mkz-field">
-                <span>Обновить телефон</span>
-                <input type="text" id="mkzUpdatePhone" autocomplete="tel">
-              </label>
-              <label class="mkz-field">
-                <span>Обновить Telegram username</span>
-                <input type="text" id="mkzUpdateTelegram" placeholder="@username">
-              </label>
-              <label class="mkz-field">
-                <span>Новая аватарка</span>
-                <input type="file" id="mkzUpdateAvatar" accept="image/*">
-              </label>
-
-              <div class="mkz-profile-card" id="mkzPrivacySettingsCard">
-                <div class="mkz-profile-card__label">Приватность</div>
-                <h3 class="mkz-profile-card__title">Настройки отображения</h3>
-
-                <div class="mkz-privacy-box">
-                  <label class="mkz-privacy-item">
-                    <div class="mkz-privacy-item__text">
-                      <div class="mkz-privacy-item__title">Показывать номер телефона</div>
-                      <div class="mkz-privacy-item__desc">Другие пользователи смогут видеть твой телефон в профиле.</div>
-                    </div>
-                    <span class="mkz-switch">
-                      <input type="checkbox" id="mkzPrivacyShowPhone">
-                      <span class="mkz-switch__slider"></span>
-                    </span>
-                  </label>
-
-                  <label class="mkz-privacy-item">
-                    <div class="mkz-privacy-item__text">
-                      <div class="mkz-privacy-item__title">Показывать Telegram аккаунт</div>
-                      <div class="mkz-privacy-item__desc">Твой Telegram username будет отображаться в профиле.</div>
-                    </div>
-                    <span class="mkz-switch">
-                      <input type="checkbox" id="mkzPrivacyShowTelegram">
-                      <span class="mkz-switch__slider"></span>
-                    </span>
-                  </label>
-
-                  <label class="mkz-privacy-item">
-                    <div class="mkz-privacy-item__text">
-                      <div class="mkz-privacy-item__title">Показывать статус в сети</div>
-                      <div class="mkz-privacy-item__desc">Другие будут видеть, когда ты был в сети.</div>
-                    </div>
-                    <span class="mkz-switch">
-                      <input type="checkbox" id="mkzPrivacyShowLastSeen">
-                      <span class="mkz-switch__slider"></span>
-                    </span>
-                  </label>
-                </div>
-              </div>
-
-              <button class="mkz-btn mkz-btn--ghost mkz-btn--block" type="button" id="mkzUpdateProfileBtn">Обновить профиль</button>
-              <button class="mkz-btn mkz-btn--accent mkz-btn--block" type="button" id="mkzLogoutBtn">Выйти из аккаунта</button>
-            </div>
+        <!-- Мини-профиль -->
+        <div class="mkz-person-card" style="margin-bottom:16px;display:flex;align-items:center;gap:14px;padding:18px;border-radius:24px;background:linear-gradient(180deg,rgba(20,12,38,.96),rgba(8,6,20,.98));border:1px solid rgba(255,255,255,.08);">
+          <div class="mkz-person-card__avatar" id="mkzAccountMiniAvatar" style="width:70px;height:70px;border-radius:22px;background:linear-gradient(135deg,#ff3bd4,#8b5cff);display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;font-weight:800;background-size:cover;background-position:center;flex-shrink:0;">M</div>
+          <div class="mkz-person-card__meta" style="min-width:0;">
+            <div class="mkz-person-card__name" id="mkzAccountMiniName" style="font-size:22px;font-weight:800;color:#fff;">Гость</div>
+            <div class="mkz-person-card__id" id="mkzAccountMiniId" style="margin-top:6px;color:#b29cff;font-size:15px;font-weight:700;">ID: —</div>
+            <div class="mkz-person-card__status" id="mkzAccountMiniStatus" style="margin-top:8px;font-size:14px;color:rgba(255,255,255,.68);">Не в сети</div>
           </div>
         </div>
-      </section>
-    </section>
+
+        <!-- Данные профиля -->
+        <div class="mkz-profile-facts" style="margin-bottom:16px;">
+          <div class="mkz-profile-fact">
+            <span class="mkz-profile-fact__label">Дата регистрации</span>
+            <div class="mkz-profile-fact__value" id="mkzAccountRegistered">—</div>
+          </div>
+          <div class="mkz-profile-fact">
+            <span class="mkz-profile-fact__label">Телефон</span>
+            <div class="mkz-profile-fact__value" id="mkzAccountPhone">—</div>
+          </div>
+          <div class="mkz-profile-fact">
+            <span class="mkz-profile-fact__label">Telegram</span>
+            <div class="mkz-profile-fact__value" id="mkzAccountTelegram">—</div>
+          </div>
+        </div>
+
+        <!-- Описание профиля -->
+        <div class="mkz-profile-description">
+          <label>📝 Описание профиля</label>
+          <textarea id="mkzUpdateBio" placeholder="Расскажите о себе..."></textarea>
+          <button id="mkzUpdateBioBtn" class="mkz-btn mkz-btn--primary" style="margin-top: 12px;">Сохранить описание</button>
+        </div>
+
+        <!-- Статистика -->
+        <div class="mkz-profile-stats" style="margin-bottom:16px;">
+          <div class="mkz-profile-stat"><strong>0</strong><span>Отзывов</span></div>
+          <div class="mkz-profile-stat"><strong>0</strong><span>Комментариев</span></div>
+        </div>
+      </div>
+
+      <div class="mkz-form-card">
+        <div id="mkzAuthBlock">
+          <div class="mkz-auth-switch">
+            <button class="mkz-sort-btn is-active" id="mkzShowLogin" type="button">Вход</button>
+            <button class="mkz-sort-btn" id="mkzShowRegister" type="button">Регистрация</button>
+          </div>
+
+          <form id="mkzLoginForm" class="mkz-form">
+            <label class="mkz-field">
+              <span>Email</span>
+              <input type="email" id="mkzLoginEmail" autocomplete="email" required>
+            </label>
+            <label class="mkz-field">
+              <span>Пароль</span>
+              <input type="password" id="mkzLoginPassword" autocomplete="current-password" required>
+            </label>
+            <button class="mkz-btn mkz-btn--primary mkz-btn--block" type="submit" id="mkzLoginBtn">Войти</button>
+          </form>
+
+          <form id="mkzRegisterForm" class="mkz-form" style="display:none;">
+            <label class="mkz-field">
+              <span>Email</span>
+              <input type="email" id="mkzRegisterEmail" autocomplete="email" required>
+            </label>
+            <label class="mkz-field">
+              <span>Пароль</span>
+              <input type="password" id="mkzRegisterPassword" autocomplete="new-password" required>
+            </label>
+            <label class="mkz-field">
+              <span>Никнейм</span>
+              <input type="text" id="mkzNameInput" autocomplete="username" required>
+            </label>
+            <label class="mkz-field">
+              <span>Телефон</span>
+              <input type="text" id="mkzPhoneInput" autocomplete="tel">
+            </label>
+
+            <div class="mkz-social-inputs">
+              <div class="mkz-field">
+                <span>📱 Telegram username</span>
+                <input type="text" id="mkzTelegramInput" placeholder="@username или username">
+                <small>Укажите ваш Telegram username</small>
+              </div>
+              <div class="mkz-field">
+                <span>📘 ВКонтакте</span>
+                <input type="text" id="mkzVkUsername" placeholder="https://vk.com/id123 или username">
+                <small>Ссылка на страницу или ID</small>
+              </div>
+            </div>
+            <div id="mkzSocialError" class="mkz-social-error"></div>
+
+            <label class="mkz-field">
+              <span>Аватарка</span>
+              <input type="file" id="mkzAvatarInput" accept="image/*">
+            </label>
+            <button class="mkz-btn mkz-btn--primary mkz-btn--block" type="submit" id="mkzRegisterBtn">Зарегистрироваться</button>
+          </form>
+        </div>
+
+        <div class="mkz-profile-preview" id="mkzProfilePreview">
+          <div class="mkz-profile-preview__avatar" id="mkzPreviewAvatar">M</div>
+          <div class="mkz-profile-preview__label">Активный профиль</div>
+          <div class="mkz-profile-preview__name" id="mkzPreviewName">Гость</div>
+          <div class="mkz-profile-preview__phone" id="mkzPreviewPhone">Не авторизован</div>
+          <div class="mkz-profile-preview__phone" id="mkzPreviewUserId">ID: —</div>
+        </div>
+
+        <div class="mkz-account-actions" id="mkzAccountActions" style="display:none;">
+          <label class="mkz-field">
+            <span>Обновить никнейм</span>
+            <input type="text" id="mkzUpdateName" autocomplete="username">
+          </label>
+          <label class="mkz-field">
+            <span>Обновить телефон</span>
+            <input type="text" id="mkzUpdatePhone" autocomplete="tel">
+          </label>
+          <label class="mkz-field">
+            <span>Обновить Telegram username</span>
+            <input type="text" id="mkzUpdateTelegram" placeholder="@username">
+          </label>
+          <label class="mkz-field">
+            <span>Новая аватарка</span>
+            <input type="file" id="mkzUpdateAvatar" accept="image/*">
+          </label>
+
+          <div class="mkz-profile-card" id="mkzPrivacySettingsCard">
+            <div class="mkz-profile-card__label">Приватность</div>
+            <h3 class="mkz-profile-card__title">Настройки отображения</h3>
+            <div class="mkz-privacy-box">
+              <label class="mkz-privacy-item">
+                <div class="mkz-privacy-item__text">
+                  <div class="mkz-privacy-item__title">Показывать номер телефона</div>
+                  <div class="mkz-privacy-item__desc">Другие пользователи смогут видеть твой телефон в профиле.</div>
+                </div>
+                <span class="mkz-switch">
+                  <input type="checkbox" id="mkzPrivacyShowPhone">
+                  <span class="mkz-switch__slider"></span>
+                </span>
+              </label>
+              <label class="mkz-privacy-item">
+                <div class="mkz-privacy-item__text">
+                  <div class="mkz-privacy-item__title">Показывать Telegram аккаунт</div>
+                  <div class="mkz-privacy-item__desc">Твой Telegram username будет отображаться в профиле.</div>
+                </div>
+                <span class="mkz-switch">
+                  <input type="checkbox" id="mkzPrivacyShowTelegram">
+                  <span class="mkz-switch__slider"></span>
+                </span>
+              </label>
+              <label class="mkz-privacy-item">
+                <div class="mkz-privacy-item__text">
+                  <div class="mkz-privacy-item__title">Показывать статус в сети</div>
+                  <div class="mkz-privacy-item__desc">Другие будут видеть, когда ты был в сети.</div>
+                </div>
+                <span class="mkz-switch">
+                  <input type="checkbox" id="mkzPrivacyShowLastSeen">
+                  <span class="mkz-switch__slider"></span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <button class="mkz-btn mkz-btn--ghost mkz-btn--block" type="button" id="mkzUpdateProfileBtn">Обновить профиль</button>
+          <button class="mkz-btn mkz-btn--accent mkz-btn--block" type="button" id="mkzLogoutBtn">Выйти из аккаунта</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
   </main>
 
   <footer class="mkz-footer">
