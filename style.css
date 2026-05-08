@@ -1804,3 +1804,116 @@ body, .mkz-site {
   border: 1px solid rgba(255,255,255,0.1);
   color: #e2e8f0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== ПРИНУДИТЕЛЬНЫЙ ФИКС АККАУНТА ========== */
+.mkz-account-layout {
+  display: grid !important;
+  grid-template-columns: 1fr 480px !important;
+  gap: 24px !important;
+  align-items: start !important;
+}
+
+.mkz-account-side {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+}
+
+.mkz-profile-facts {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 14px !important;
+}
+
+.mkz-profile-fact {
+  background: rgba(255,255,255,0.03) !important;
+  border-radius: 20px !important;
+  padding: 16px !important;
+}
+
+.mkz-profile-fact__label {
+  color: #cbbce6 !important;
+  font-size: 12px !important;
+  display: block !important;
+  margin-bottom: 6px !important;
+}
+
+.mkz-profile-fact__value {
+  color: #fff !important;
+  font-size: 14px !important;
+}
+
+.mkz-profile-description {
+  background: linear-gradient(180deg, rgba(20,12,38,.96), rgba(8,6,20,.98)) !important;
+  border-radius: 24px !important;
+  padding: 20px !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  margin-top: 8px !important;
+}
+
+.mkz-profile-description textarea {
+  background: rgba(0,0,0,0.35) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  width: 100% !important;
+  border-radius: 16px !important;
+  padding: 14px !important;
+}
+
+.mkz-account-actions {
+  margin-top: 20px !important;
+  display: grid !important;
+  gap: 12px !important;
+}
+
+.mkz-profile-preview {
+  background: rgba(255,255,255,0.03) !important;
+  border-radius: 20px !important;
+  padding: 20px !important;
+  text-align: center !important;
+  margin-top: 20px !important;
+}
+
+.mkz-profile-preview__avatar {
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 auto 12px !important;
+}
+
+/* Цвета текста */
+.mkz-account-side h2,
+.mkz-account-side .mkz-chip,
+.mkz-person-card__name,
+.mkz-person-card__id,
+.mkz-profile-stat strong,
+.mkz-profile-stat span,
+.mkz-profile-description label {
+  color: #fff !important;
+}
+
+.mkz-person-card__status {
+  color: rgba(255,255,255,0.68) !important;
+}
