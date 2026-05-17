@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mark1z Design</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%25' y='50%25' font-size='60' text-anchor='middle' dy='.35em' fill='%23ffffff'%3EMD%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
 <section class="mkz-site" id="mkzSite">
   <header class="mkz-header">
     <div class="mkz-container mkz-header__inner">
@@ -5,11 +17,9 @@
         <span class="mkz-logo__mark">MD</span>
         <span class="mkz-logo__text">Mark1z Design</span>
       </a>
-
       <button class="mkz-burger" id="mkzBurger" aria-label="Открыть меню" type="button">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="mkz-nav" id="mkzNav">
         <button type="button" class="mkz-nav__link is-active" data-screen-open="home">Главная</button>
         <button type="button" class="mkz-nav__link" data-screen-open="portfolio">Портфолио</button>
@@ -22,7 +32,6 @@
         <button type="button" class="mkz-nav__link mkz-admin-only" id="mkzParticipantsNavBtn" data-screen-open="participants" style="display:none;">Участники</button>
         <button type="button" class="mkz-nav__link" data-screen-open="account">Аккаунт</button>
       </nav>
-
       <button class="mkz-user-pill mkz-user-pill--button" id="mkzUserPillButton" type="button">
         <span class="mkz-user-pill__avatar" id="mkzTopAvatar">M</span>
         <span id="mkzUserNameTop">Гость</span>
@@ -38,13 +47,11 @@
           <div class="mkz-hero__content">
             <div class="mkz-chip">digital designer</div>
             <h1 class="mkz-title-glow">Mark1z Design</h1>
-
             <div class="mkz-about-box">
               <div class="mkz-about-head">
                 <div class="mkz-about-title">Обо мне</div>
                 <p class="mkz-about-lead">🧑‍🎨 Дизайнер, который делает не просто красиво, а продаёт</p>
               </div>
-
               <div class="mkz-about-tabs" id="mkzAboutTabs">
                 <button class="mkz-about-tab is-active" type="button" data-about-tab="intro">Вступление</button>
                 <button class="mkz-about-tab" type="button" data-about-tab="benefits">Что получите</button>
@@ -52,108 +59,47 @@
                 <button class="mkz-about-tab" type="button" data-about-tab="tools">Инструменты</button>
                 <button class="mkz-about-tab" type="button" data-about-tab="approach">Подход</button>
               </div>
-
               <div class="mkz-about-panels">
                 <div class="mkz-about-panel is-active" data-about-panel="intro">
                   <p><strong>Mark1z Design</strong> — авторский бренд, под которым я разрабатываю современные дизайн-решения: от превью и баннеров до интерфейсов и сайтов.</p>
                   <p><strong>Важный момент ❗</strong><br>Если ценник смущает — со мной всегда можно договориться.</p>
                   <p>Привет! Меня зовут Дима, мне 19 лет. Занимаюсь дизайном уже более 4 лет и за это время научился делать не просто визуал, а работающий дизайн, который цепляет внимание и выделяет среди конкурентов.</p>
                 </div>
-
                 <div class="mkz-about-panel" data-about-panel="benefits">
-                  <ul class="mkz-about-list">
-                    <li>🔥 Уникальный дизайн без шаблонов</li>
-                    <li>⚡ Быструю работу и соблюдение сроков</li>
-                    <li>💬 Постоянную связь на всех этапах</li>
-                    <li>🎯 Попадание в стиль и задачу с первого раза</li>
-                    <li>🔄 Правки до результата, который реально понравится</li>
-                  </ul>
+                  <ul class="mkz-about-list"><li>🔥 Уникальный дизайн без шаблонов</li><li>⚡ Быструю работу и соблюдение сроков</li><li>💬 Постоянную связь на всех этапах</li><li>🎯 Попадание в стиль и задачу с первого раза</li><li>🔄 Правки до результата, который реально понравится</li></ul>
                 </div>
-
                 <div class="mkz-about-panel" data-about-panel="style">
                   <p><strong>Моя сильная сторона</strong> — тёмный, киберспортивный и эффектный дизайн: неон, огонь, контраст, динамика.</p>
-                  <ul class="mkz-about-list">
-                    <li>игровые проекты</li>
-                    <li>баннеры</li>
-                    <li>приложения</li>
-                    <li>соцсети</li>
-                    <li>киберспорт</li>
-                  </ul>
+                  <ul class="mkz-about-list"><li>игровые проекты</li><li>баннеры</li><li>приложения</li><li>соцсети</li><li>киберспорт</li></ul>
                   <p>⚠️ Со светлыми дизайнами тоже работаю при необходимости.</p>
                 </div>
-
                 <div class="mkz-about-panel" data-about-panel="tools">
-                  <div class="mkz-tools-grid">
-                    <div class="mkz-card">
-                      <h3>ПК</h3>
-                      <ul class="mkz-about-list">
-                        <li>Figma</li>
-                        <li>Photoshop</li>
-                        <li>Illustrator</li>
-                        <li>After Effects</li>
-                      </ul>
-                    </div>
-                    <div class="mkz-card">
-                      <h3>Телефон</h3>
-                      <ul class="mkz-about-list">
-                        <li>Ibis Paint X</li>
-                        <li>PicsArt</li>
-                        <li>PixelLab</li>
-                        <li>Polarr</li>
-                        <li>Luma</li>
-                      </ul>
-                    </div>
-                  </div>
+                  <div class="mkz-tools-grid"><div class="mkz-card"><h3>ПК</h3><ul class="mkz-about-list"><li>Figma</li><li>Photoshop</li><li>Illustrator</li><li>After Effects</li></ul></div><div class="mkz-card"><h3>Телефон</h3><ul class="mkz-about-list"><li>Ibis Paint X</li><li>PicsArt</li><li>PixelLab</li><li>Polarr</li><li>Luma</li></ul></div></div>
                 </div>
-
-                <div class="mkz-about-panel" data-about-panel="approach">
-                  <p>🧠 Я не делаю «на отстань». Моя цель — чтобы вы посмотрели на результат и сказали: <strong>«Вот это реально круто»</strong>.</p>
-                  <p>Всегда предлагаю идеи, если вижу, как можно сделать лучше.</p>
-                  <p>Если вам нужен стильный, современный и выделяющийся дизайн — вы по адресу.</p>
-                </div>
+                <div class="mkz-about-panel" data-about-panel="approach"><p>🧠 Я не делаю «на отстань». Моя цель — чтобы вы посмотрели на результат и сказали: <strong>«Вот это реально круто»</strong>.</p><p>Всегда предлагаю идеи, если вижу, как можно сделать лучше.</p><p>Если вам нужен стильный, современный и выделяющийся дизайн — вы по адресу.</p></div>
               </div>
             </div>
-
             <div class="mkz-hero__actions">
               <button class="mkz-btn mkz-btn--primary" type="button" data-screen-open="portfolio">Смотреть портфолио</button>
               <button class="mkz-btn mkz-btn--ghost" type="button" data-screen-open="account">Войти / Регистрация</button>
               <button class="mkz-btn mkz-btn--accent" type="button" id="mkzOpenOrderModal">Заказать</button>
             </div>
-
             <div class="mkz-stats">
-              <div class="mkz-stat">
-                <strong id="mkzPortfolioCount">0</strong>
-                <span>работ в портфолио</span>
-              </div>
-              <div class="mkz-stat">
-                <strong id="mkzAverageRatingTop">5.0</strong>
-                <span>средний рейтинг</span>
-              </div>
-              <div class="mkz-stat">
-                <strong id="mkzInlineUsername">Гость</strong>
-                <span>сейчас на сайте</span>
-              </div>
+              <div class="mkz-stat"><strong id="mkzPortfolioCount">0</strong><span>работ в портфолио</span></div>
+              <div class="mkz-stat"><strong id="mkzAverageRatingTop">5.0</strong><span>средний рейтинг</span></div>
+              <div class="mkz-stat"><strong id="mkzInlineUsername">Гость</strong><span>сейчас на сайте</span></div>
             </div>
           </div>
-
           <div class="mkz-hero__visual">
             <div class="mkz-glow-orb mkz-glow-orb--one"></div>
             <div class="mkz-glow-orb mkz-glow-orb--two"></div>
-            <div class="mkz-phone-card mkz-float">
-              <img src="https://optim.tildacdn.pub/tild3562-6536-4465-a136-656231663436/-/format/webp/photo_2026-04-12_18-.jpg.webp" alt="App concept">
-            </div>
+            <div class="mkz-phone-card mkz-float"><img src="https://optim.tildacdn.pub/tild3562-6536-4465-a136-656231663436/-/format/webp/photo_2026-04-12_18-.jpg.webp" alt="App concept"></div>
           </div>
         </div>
       </section>
-
       <section class="mkz-section">
         <div class="mkz-container">
-          <div class="mkz-section__head">
-            <div class="mkz-chip">services</div>
-            <h2>Услуги</h2>
-            <p>Основные направления Mark1z Design.</p>
-          </div>
-
+          <div class="mkz-section__head"><div class="mkz-chip">services</div><h2>Услуги</h2><p>Основные направления Mark1z Design.</p></div>
           <div class="mkz-feature-grid">
             <article class="mkz-card mkz-card--hover"><h3>Логотипы</h3><p>600 ₽</p></article>
             <article class="mkz-card mkz-card--hover"><h3>Постер / Баннер</h3><p>500 ₽</p></article>
@@ -170,32 +116,8 @@
     <section class="mkz-screen" data-screen="portfolio" id="portfolio">
       <section class="mkz-section">
         <div class="mkz-container">
-          <div class="mkz-section__head mkz-section__head--row">
-            <div>
-              <div class="mkz-chip">portfolio</div>
-              <h2>Портфолио</h2>
-              <p>Тут портфолио Маркиза.</p>
-            </div>
-            <button class="mkz-quick-add" id="mkzQuickAddFolder" type="button" style="display:none;">＋</button>
-          </div>
-
-          <div class="mkz-folder-browser" id="mkzFolderBrowser">
-            <div class="mkz-folder-browser__list" id="mkzFolderBrowserList">
-              <div class="mkz-folder-grid" id="mkzFolderGrid"></div>
-            </div>
-
-            <div class="mkz-folder-browser__inside" id="mkzFolderInside" style="display:none;">
-              <div class="mkz-folder-inside-head">
-                <button class="mkz-btn mkz-btn--ghost" type="button" id="mkzBackToFolders">← Назад к папкам</button>
-                <div>
-                  <h3 class="mkz-folder-inside-title" id="mkzCurrentFolderTitle">Папка</h3>
-                  <p class="mkz-folder-inside-subtitle">Работы внутри выбранной папки</p>
-                </div>
-                <button class="mkz-quick-add" id="mkzQuickAddWork" type="button" style="display:none;">＋</button>
-              </div>
-              <div id="mkzCurrentFolderWorks"></div>
-            </div>
-          </div>
+          <div class="mkz-section__head mkz-section__head--row"><div><div class="mkz-chip">portfolio</div><h2>Портфолио</h2><p>Тут портфолио Маркиза.</p></div><button class="mkz-quick-add" id="mkzQuickAddFolder" type="button" style="display:none;">＋</button></div>
+          <div class="mkz-folder-browser" id="mkzFolderBrowser"><div class="mkz-folder-browser__list" id="mkzFolderBrowserList"><div class="mkz-folder-grid" id="mkzFolderGrid"></div></div><div class="mkz-folder-browser__inside" id="mkzFolderInside" style="display:none;"><div class="mkz-folder-inside-head"><button class="mkz-btn mkz-btn--ghost" type="button" id="mkzBackToFolders">← Назад к папкам</button><div><h3 class="mkz-folder-inside-title" id="mkzCurrentFolderTitle">Папка</h3><p class="mkz-folder-inside-subtitle">Работы внутри выбранной папки</p></div><button class="mkz-quick-add" id="mkzQuickAddWork" type="button" style="display:none;">＋</button></div><div id="mkzCurrentFolderWorks"></div></div></div>
         </div>
       </section>
     </section>
@@ -203,52 +125,7 @@
     <!-- ========== ОТЗЫВЫ ========== -->
     <section class="mkz-screen" data-screen="reviews" id="reviews">
       <section class="mkz-section">
-        <div class="mkz-container mkz-two-col">
-          <div>
-            <div class="mkz-section__head">
-              <div class="mkz-chip">reviews</div>
-              <h2>Отзывы клиентов</h2>
-            </div>
-
-            <div class="mkz-form-card">
-              <div class="mkz-review-login-note" id="mkzReviewLoginNote">Чтобы оставить отзыв, войди в аккаунт.</div>
-
-              <form id="mkzReviewForm" class="mkz-form">
-                <label class="mkz-field">
-                  <span>Текст отзыва</span>
-                  <textarea id="mkzReviewText" class="mkz-textarea" required></textarea>
-                </label>
-
-                <div class="mkz-field">
-                  <span>Оценка</span>
-                  <div class="mkz-stars" id="mkzStars">
-                    <button type="button" class="mkz-star" data-rating="1">★</button>
-                    <button type="button" class="mkz-star" data-rating="2">★</button>
-                    <button type="button" class="mkz-star" data-rating="3">★</button>
-                    <button type="button" class="mkz-star" data-rating="4">★</button>
-                    <button type="button" class="mkz-star" data-rating="5">★</button>
-                  </div>
-                </div>
-
-                <label class="mkz-field">
-                  <span>Картинка к отзыву</span>
-                  <input type="file" id="mkzReviewImage" accept="image/*">
-                </label>
-
-                <button class="mkz-btn mkz-btn--primary mkz-btn--block" type="submit" id="mkzReviewSendBtn">Оставить отзыв</button>
-              </form>
-            </div>
-
-            <div class="mkz-review-summary">
-              <div class="mkz-review-summary__value" id="mkzAverageRating">5.0</div>
-              <div class="mkz-review-summary__label">Средний рейтинг</div>
-            </div>
-          </div>
-
-          <div>
-            <div class="mkz-reviews-list" id="mkzReviewsList"></div>
-          </div>
-        </div>
+        <div class="mkz-container mkz-two-col"><div><div class="mkz-section__head"><div class="mkz-chip">reviews</div><h2>Отзывы клиентов</h2></div><div class="mkz-form-card"><div class="mkz-review-login-note" id="mkzReviewLoginNote">Чтобы оставить отзыв, войди в аккаунт.</div><form id="mkzReviewForm" class="mkz-form"><label class="mkz-field"><span>Текст отзыва</span><textarea id="mkzReviewText" class="mkz-textarea" required></textarea></label><div class="mkz-field"><span>Оценка</span><div class="mkz-stars" id="mkzStars"><button type="button" class="mkz-star" data-rating="1">★</button><button type="button" class="mkz-star" data-rating="2">★</button><button type="button" class="mkz-star" data-rating="3">★</button><button type="button" class="mkz-star" data-rating="4">★</button><button type="button" class="mkz-star" data-rating="5">★</button></div></div><label class="mkz-field"><span>Картинка к отзыву</span><input type="file" id="mkzReviewImage" accept="image/*"></label><button class="mkz-btn mkz-btn--primary mkz-btn--block" type="submit" id="mkzReviewSendBtn">Оставить отзыв</button></form></div><div class="mkz-review-summary"><div class="mkz-review-summary__value" id="mkzAverageRating">5.0</div><div class="mkz-review-summary__label">Средний рейтинг</div></div></div><div><div class="mkz-reviews-list" id="mkzReviewsList"></div></div></div>
       </section>
     </section>
 
@@ -256,104 +133,8 @@
     <section class="mkz-screen" data-screen="feed" id="feed">
       <section class="mkz-section">
         <div class="mkz-container">
-          <div class="mkz-section__head">
-            <div class="mkz-chip">news</div>
-            <h2>Лента новостей</h2>
-            <p>Посты, заметки, визуалы и рабочие обновления Mark1z Design.</p>
-          </div>
-
-          <div class="mkz-news-composer" id="mkzNewsAdminPanel" style="display:none;">
-            <div class="mkz-news-composer__bar">
-              <textarea
-                id="mkzNewsText"
-                class="mkz-news-composer__input"
-                placeholder="Напиши пост, новость, анонс, конкурс или мысль..."
-              ></textarea>
-
-              <input type="text" id="mkzNewsTitle" class="mkz-news-composer__small" placeholder="Заголовок поста">
-
-              <div class="mkz-news-composer__actions">
-                <div class="mkz-news-composer__dock">
-                  <button class="mkz-attach-btn" type="button" id="mkzTogglePinBtn" title="Закрепить">📌</button>
-                  <button class="mkz-attach-btn" type="button" id="mkzToggleContestBtn" title="Конкурс">🏆</button>
-                  <button class="mkz-attach-btn" type="button" id="mkzToggleLinkBtn" title="Ссылка">🔗</button>
-                  <button class="mkz-attach-btn" type="button" id="mkzTogglePollBtn" title="Опрос">📊</button>
-                </div>
-
-                <div class="mkz-news-composer__right">
-                  <input type="file" id="mkzNewsImage" accept="image/*" hidden>
-                  <input type="file" id="mkzNewsExtraFile" hidden>
-
-                  <button class="mkz-attach-btn" type="button" id="mkzAttachImageBtn" title="Прикрепить фото">🖼</button>
-                  <button class="mkz-attach-btn" type="button" id="mkzAttachFileBtn" title="Прикрепить файл">📎</button>
-                  <button class="mkz-btn mkz-btn--primary" type="button" id="mkzNewsAddBtn">Опубликовать</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="mkz-news-composer__meta" id="mkzNewsMetaPreview"></div>
-
-            <div class="mkz-news-extra-panel" id="mkzLinkPanel" style="display:none;">
-              <label class="mkz-field">
-                <span>Название кнопки ссылки</span>
-                <input
-                  type="text"
-                  id="mkzNewsLinkText"
-                  class="mkz-news-composer__small"
-                  placeholder="Например: Перейти в Telegram"
-                >
-              </label>
-
-              <label class="mkz-field">
-                <span>Ссылка кнопки</span>
-                <input
-                  type="url"
-                  id="mkzNewsLinkUrl"
-                  class="mkz-news-composer__small"
-                  placeholder="https://..."
-                >
-              </label>
-            </div>
-
-            <div class="mkz-news-extra-panel" id="mkzPollPanel" style="display:none;">
-              <label class="mkz-field">
-                <span>Вопрос для опроса</span>
-                <input type="text" id="mkzPollQuestion">
-              </label>
-              <label class="mkz-field">
-                <span>Вариант 1</span>
-                <input type="text" id="mkzPollOption1">
-              </label>
-              <label class="mkz-field">
-                <span>Вариант 2</span>
-                <input type="text" id="mkzPollOption2">
-              </label>
-              <label class="mkz-field">
-                <span>Вариант 3</span>
-                <input type="text" id="mkzPollOption3">
-              </label>
-            </div>
-
-            <div class="mkz-news-extra-panel" id="mkzContestPanel" style="display:none;">
-              <label class="mkz-field">
-                <span>Название конкурса</span>
-                <input type="text" id="mkzContestTitle">
-              </label>
-              <label class="mkz-field">
-                <span>Описание конкурса</span>
-                <textarea id="mkzContestDescription" class="mkz-textarea"></textarea>
-              </label>
-              <label class="mkz-field">
-                <span>Приз</span>
-                <input type="text" id="mkzContestPrize">
-              </label>
-              <label class="mkz-field">
-                <span>Дедлайн</span>
-                <input type="datetime-local" id="mkzContestDeadline">
-              </label>
-            </div>
-          </div>
-
+          <div class="mkz-section__head"><div class="mkz-chip">news</div><h2>Лента новостей</h2><p>Посты, заметки, визуалы и рабочие обновления Mark1z Design.</p></div>
+          <div class="mkz-news-composer" id="mkzNewsAdminPanel" style="display:none;"><div class="mkz-news-composer__bar"><textarea id="mkzNewsText" class="mkz-news-composer__input" placeholder="Напиши пост, новость, анонс, конкурс или мысль..."></textarea><input type="text" id="mkzNewsTitle" class="mkz-news-composer__small" placeholder="Заголовок поста"><div class="mkz-news-composer__actions"><div class="mkz-news-composer__dock"><button class="mkz-attach-btn" type="button" id="mkzTogglePinBtn" title="Закрепить">📌</button><button class="mkz-attach-btn" type="button" id="mkzToggleContestBtn" title="Конкурс">🏆</button><button class="mkz-attach-btn" type="button" id="mkzToggleLinkBtn" title="Ссылка">🔗</button><button class="mkz-attach-btn" type="button" id="mkzTogglePollBtn" title="Опрос">📊</button></div><div class="mkz-news-composer__right"><input type="file" id="mkzNewsImage" accept="image/*" hidden><input type="file" id="mkzNewsExtraFile" hidden><button class="mkz-attach-btn" type="button" id="mkzAttachImageBtn" title="Прикрепить фото">🖼</button><button class="mkz-attach-btn" type="button" id="mkzAttachFileBtn" title="Прикрепить файл">📎</button><button class="mkz-btn mkz-btn--primary" type="button" id="mkzNewsAddBtn">Опубликовать</button></div></div></div><div class="mkz-news-composer__meta" id="mkzNewsMetaPreview"></div><div class="mkz-news-extra-panel" id="mkzLinkPanel" style="display:none;"><label class="mkz-field"><span>Название кнопки ссылки</span><input type="text" id="mkzNewsLinkText" class="mkz-news-composer__small" placeholder="Например: Перейти в Telegram"></label><label class="mkz-field"><span>Ссылка кнопки</span><input type="url" id="mkzNewsLinkUrl" class="mkz-news-composer__small" placeholder="https://..."></label></div><div class="mkz-news-extra-panel" id="mkzPollPanel" style="display:none;"><label class="mkz-field"><span>Вопрос для опроса</span><input type="text" id="mkzPollQuestion"></label><label class="mkz-field"><span>Вариант 1</span><input type="text" id="mkzPollOption1"></label><label class="mkz-field"><span>Вариант 2</span><input type="text" id="mkzPollOption2"></label><label class="mkz-field"><span>Вариант 3</span><input type="text" id="mkzPollOption3"></label></div><div class="mkz-news-extra-panel" id="mkzContestPanel" style="display:none;"><label class="mkz-field"><span>Название конкурса</span><input type="text" id="mkzContestTitle"></label><label class="mkz-field"><span>Описание конкурса</span><textarea id="mkzContestDescription" class="mkz-textarea"></textarea></label><label class="mkz-field"><span>Приз</span><input type="text" id="mkzContestPrize"></label><label class="mkz-field"><span>Дедлайн</span><input type="datetime-local" id="mkzContestDeadline"></label></div></div>
           <div class="mkz-news-list" id="mkzNewsList"></div>
         </div>
       </section>
@@ -362,69 +143,7 @@
     <!-- ========== FAQ ========== -->
     <section class="mkz-screen" data-screen="faq" id="faq">
       <section class="mkz-section">
-        <div class="mkz-container mkz-two-col">
-          <div class="mkz-card">
-            <h3>FAQ</h3>
-            <div class="mkz-faq-list">
-              <div class="mkz-faq-item">
-                <strong>Сколько длится работа?</strong>
-                <p>Зависит от типа проекта. Логотипы и постеры обычно быстрее, чем сайты и приложения.</p>
-              </div>
-              <div class="mkz-faq-item">
-                <strong>Можно ли доработать проект?</strong>
-                <p>Да, правки обсуждаются отдельно.</p>
-              </div>
-              <div class="mkz-faq-item">
-                <strong>Какие форматы отдачи?</strong>
-                <p>PNG, JPG, PDF, исходники, Figma, архивы — по задаче.</p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div class="mkz-card">
-              <h3>Ответы клиентам</h3>
-              <div class="mkz-owner-replies">
-                <div class="mkz-owner-reply">
-                  <strong>По срокам</strong>
-                  <p>Срочные задачи лучше писать сразу в Telegram.</p>
-                </div>
-                <div class="mkz-owner-reply">
-                  <strong>По цене</strong>
-                  <p>Нестандартные задачи обсуждаются отдельно в ЛС.</p>
-                </div>
-                <div class="mkz-owner-reply">
-                  <strong>По подаче</strong>
-                  <p>Работы делаются с упором на стиль, читаемость и запоминаемость.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="mkz-card" style="margin-top:20px;">
-              <h3>Задать вопрос</h3>
-              <form id="mkzFaqAskForm" class="mkz-form">
-                <label class="mkz-field">
-                  <span>Имя</span>
-                  <input type="text" id="mkzFaqAskName" placeholder="Ваше имя">
-                </label>
-                <label class="mkz-field">
-                  <span>Контакт</span>
-                  <input type="text" id="mkzFaqAskContact" placeholder="Telegram, email или телефон">
-                </label>
-                <label class="mkz-field">
-                  <span>Вопрос</span>
-                  <textarea id="mkzFaqAskQuestion" class="mkz-textarea" placeholder="Задайте вопрос" required></textarea>
-                </label>
-                <button class="mkz-btn mkz-btn--primary mkz-btn--block" type="submit" id="mkzFaqAskBtn">Отправить вопрос</button>
-              </form>
-            </div>
-
-            <div class="mkz-card" id="mkzFaqQuestionsAdminWrap" style="display:none; margin-top:20px;">
-              <h3>Вопросы из FAQ</h3>
-              <div id="mkzFaqQuestionsAdminList"></div>
-            </div>
-          </div>
-        </div>
+        <div class="mkz-container mkz-two-col"><div class="mkz-card"><h3>FAQ</h3><div class="mkz-faq-list"><div class="mkz-faq-item"><strong>Сколько длится работа?</strong><p>Зависит от типа проекта. Логотипы и постеры обычно быстрее, чем сайты и приложения.</p></div><div class="mkz-faq-item"><strong>Можно ли доработать проект?</strong><p>Да, правки обсуждаются отдельно.</p></div><div class="mkz-faq-item"><strong>Какие форматы отдачи?</strong><p>PNG, JPG, PDF, исходники, Figma, архивы — по задаче.</p></div></div></div><div><div class="mkz-card"><h3>Ответы клиентам</h3><div class="mkz-owner-replies"><div class="mkz-owner-reply"><strong>По срокам</strong><p>Срочные задачи лучше писать сразу в Telegram.</p></div><div class="mkz-owner-reply"><strong>По цене</strong><p>Нестандартные задачи обсуждаются отдельно в ЛС.</p></div><div class="mkz-owner-reply"><strong>По подаче</strong><p>Работы делаются с упором на стиль, читаемость и запоминаемость.</p></div></div></div><div class="mkz-card" style="margin-top:20px;"><h3>Задать вопрос</h3><form id="mkzFaqAskForm" class="mkz-form"><label class="mkz-field"><span>Имя</span><input type="text" id="mkzFaqAskName" placeholder="Ваше имя"></label><label class="mkz-field"><span>Контакт</span><input type="text" id="mkzFaqAskContact" placeholder="Telegram, email или телефон"></label><label class="mkz-field"><span>Вопрос</span><textarea id="mkzFaqAskQuestion" class="mkz-textarea" placeholder="Задайте вопрос" required></textarea></label><button class="mkz-btn mkz-btn--primary mkz-btn--block" type="submit" id="mkzFaqAskBtn">Отправить вопрос</button></form></div><div class="mkz-card" id="mkzFaqQuestionsAdminWrap" style="display:none; margin-top:20px;"><h3>Вопросы из FAQ</h3><div id="mkzFaqQuestionsAdminList"></div></div></div></div>
       </section>
     </section>
 
@@ -432,24 +151,8 @@
     <section class="mkz-screen" data-screen="people" id="people">
       <section class="mkz-section">
         <div class="mkz-container">
-          <div class="mkz-section__head">
-            <div class="mkz-chip">community</div>
-            <h2>Найти друзей</h2>
-            <p>Найди пользователя по никнейму или персональному ID.</p>
-          </div>
-
-          <div class="mkz-form-card" style="margin-bottom:20px;">
-            <div class="mkz-people-search">
-              <input
-                type="text"
-                id="mkzPeopleSearchInput"
-                class="mkz-news-composer__small"
-                placeholder="Введите никнейм или ID, например #0000001"
-              >
-              <button class="mkz-btn mkz-btn--primary" type="button" id="mkzPeopleSearchBtn">Найти</button>
-            </div>
-          </div>
-
+          <div class="mkz-section__head"><div class="mkz-chip">community</div><h2>Найти друзей</h2><p>Найди пользователя по никнейму или персональному ID.</p></div>
+          <div class="mkz-form-card" style="margin-bottom:20px;"><div class="mkz-people-search"><input type="text" id="mkzPeopleSearchInput" class="mkz-news-composer__small" placeholder="Введите никнейм или ID, например #0000001"><button class="mkz-btn mkz-btn--primary" type="button" id="mkzPeopleSearchBtn">Найти</button></div></div>
           <div class="mkz-people-grid" id="mkzPeopleSearchResults"></div>
         </div>
       </section>
@@ -459,55 +162,51 @@
     <section class="mkz-screen" data-screen="profile" id="profile">
       <section class="mkz-section">
         <div class="mkz-container">
-          <div class="mkz-profile-view">
-            <div class="mkz-profile-hero">
-              <div class="mkz-profile-avatar" id="mkzPublicProfileAvatarWrap">
-                <div class="mkz-profile-card__avatar" id="mkzPublicProfileAvatar">U</div>
+          <div class="mkz-profile-view" style="background: linear-gradient(180deg, rgba(20,12,38,.96), rgba(8,6,20,.98)); border: 1px solid rgba(255,255,255,.08); border-radius: 32px; padding: 36px;">
+            <div style="display: flex; gap: 32px; align-items: stretch; flex-wrap: wrap;">
+              <div class="mkz-profile-avatar" id="mkzPublicProfileAvatarWrap" style="width: 200px; border-radius: 32px; overflow: hidden; background: linear-gradient(135deg, #ff2fae, #7a3cff); flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
+                <div class="mkz-profile-card__avatar" id="mkzPublicProfileAvatar" style="width: 200px; height: 200px; display: flex; align-items: center; justify-content: center; background-size: cover !important; background-position: center !important; font-size: 80px; font-weight: bold; color: #fff;">M</div>
               </div>
-
-              <div class="mkz-profile-meta">
-                <div class="mkz-profile-topline">
-                  <div class="mkz-profile-name-wrap">
-                    <div class="mkz-chip">profile</div>
-                    <h2 class="mkz-profile-name" id="mkzPublicProfileName">Пользователь</h2>
-                    <div class="mkz-profile-id" id="mkzPublicProfileId">#0000001</div>
-                    <div class="mkz-profile-status" id="mkzPublicProfileStatus">Не в сети</div>
-                  </div>
-
-                  <div class="mkz-profile-actions">
-                    <button class="mkz-btn mkz-btn--primary" type="button" id="mkzOpenProfileMessengerBtn">Написать</button>
-                    <button class="mkz-btn mkz-btn--ghost" type="button" id="mkzBackToPeopleBtn">Назад к поиску</button>
+              <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 24px;">
+                  <div class="mkz-chip" style="display: inline-flex; align-items: center; justify-content: center; padding: 6px 24px;">PROFILE</div>
+                  <div style="display: flex; gap: 12px;">
+                    <button class="mkz-btn mkz-btn--primary" type="button" id="mkzOpenProfileMessengerBtn" style="padding: 8px 20px;">Написать</button>
+                    <button class="mkz-btn mkz-btn--ghost" type="button" id="mkzBackToPeopleBtn" style="padding: 8px 20px;">Назад к поиску</button>
                   </div>
                 </div>
-
-                <div class="mkz-profile-facts">
-                  <div class="mkz-profile-fact">
-                    <span class="mkz-profile-fact__label">Дата регистрации</span>
-                    <div class="mkz-profile-fact__value" id="mkzPublicProfileRegistered">—</div>
-                  </div>
-                  <div class="mkz-profile-fact">
-                    <span class="mkz-profile-fact__label">Телефон</span>
-                    <div class="mkz-profile-fact__value" id="mkzPublicProfilePhone">Телефон скрыт</div>
-                  </div>
-                  <div class="mkz-profile-fact">
-                    <span class="mkz-profile-fact__label">Telegram</span>
-                    <div class="mkz-profile-fact__value" id="mkzPublicProfileTelegram">Telegram скрыт</div>
-                  </div>
+                <h2 class="mkz-profile-name" id="mkzPublicProfileName" style="margin: 0 0 6px 0; font-size: 36px;">Minfix</h2>
+                <div class="mkz-profile-id" id="mkzPublicProfileId" style="color: #b29cff; font-size: 16px; margin-bottom: 16px;">#5828136</div>
+                <div class="mkz-profile-status" id="mkzPublicProfileStatus" style="display: flex; align-items: center; gap: 8px;">
+                  <span class="status-indicator" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></span>
+                  <span class="status-text">Был(а) 7 дней назад</span>
                 </div>
               </div>
             </div>
-
-            <div class="mkz-profile-grid">
-              <div class="mkz-profile-card">
-                <div class="mkz-profile-card__label">О пользователе</div>
-                <h3 class="mkz-profile-card__title">Описание профиля</h3>
-                <div class="mkz-profile-card__text" id="mkzPublicProfileBio">Описание профиля пока не заполнено.</div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px;">
+              <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 60px; padding: 14px 16px; text-align: center; max-width: 85%; margin: 0 auto; width: 100%;">
+                <div style="font-size: 11px; color: #cbbce6; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">ДАТА РЕГИСТРАЦИИ</div>
+                <div style="font-size: 14px; font-weight: 500;" id="mkzPublicProfileRegistered">22.04.2026</div>
               </div>
-
-              <div class="mkz-profile-card">
-                <div class="mkz-profile-card__label">Активность</div>
-                <h3 class="mkz-profile-card__title">Статистика</h3>
-                <div id="mkzPublicProfileActivity"></div>
+              <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 60px; padding: 14px 16px; text-align: center; max-width: 85%; margin: 0 auto; width: 100%;">
+                <div style="font-size: 11px; color: #cbbce6; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">ТЕЛЕФОН</div>
+                <div style="font-size: 14px; font-weight: 500;" id="mkzPublicProfilePhone">Телефон скрыт</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 60px; padding: 14px 16px; text-align: center; max-width: 85%; margin: 0 auto; width: 100%;">
+                <div style="font-size: 11px; color: #cbbce6; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">TELEGRAM</div>
+                <div style="font-size: 14px; font-weight: 500;" id="mkzPublicProfileTelegram">Telegram скрыт</div>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px;">
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 22px;">
+                <div style="font-size: 12px; color: #cbbce6; margin-bottom: 12px;">О ПОЛЬЗОВАТЕЛЕ</div>
+                <h3 style="font-size: 18px; margin: 0 0 12px 0;">Описание профиля</h3>
+                <div id="mkzPublicProfileBio" style="color: rgba(255,255,255,0.7); line-height: 1.5;">Описание профиля пока не заполнено.</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 22px;">
+                <div style="font-size: 12px; color: #cbbce6; margin-bottom: 12px;">АКТИВНОСТЬ</div>
+                <h3 style="font-size: 18px; margin: 0 0 16px 0;">Статистика</h3>
+                <div id="mkzPublicProfileActivity" style="display: flex; gap: 24px;"><div style="background: rgba(255,255,255,0.05); border-radius: 20px; padding: 16px 28px; text-align: center;"><strong id="mkzPublicProfileReviewsCount" style="font-size: 28px; display: block;">0</strong><span style="font-size: 13px; color: rgba(255,255,255,0.5);">Отзывов</span></div><div style="background: rgba(255,255,255,0.05); border-radius: 20px; padding: 16px 28px; text-align: center;"><strong id="mkzPublicProfileCommentsCount" style="font-size: 28px; display: block;">0</strong><span style="font-size: 13px; color: rgba(255,255,255,0.5);">Комментариев</span></div></div>
               </div>
             </div>
           </div>
@@ -520,114 +219,23 @@
       <section class="mkz-messenger-screen">
         <div class="mkz-container mkz-container--messenger">
           <div class="mkz-messenger mkz-messenger--fullscreen">
-
             <aside class="mkz-messenger-sidebar">
               <div class="mkz-messenger-sidebar__top">
                 <div class="mkz-messenger-title">Диалоги</div>
-
-                <div class="mkz-messenger-search">
-                  <input
-                    type="text"
-                    id="mkzMessengerSearch"
-                    class="mkz-news-composer__small"
-                    placeholder="Поиск чатов"
-                  >
-                </div>
-
+                <div class="mkz-messenger-search"><input type="text" id="mkzMessengerSearch" class="mkz-news-composer__small" placeholder="Поиск чатов"></div>
                 <div class="mkz-messenger-pinned" id="mkzMessengerPinnedOwner">
-                  <div class="mkz-messenger-pinned__label">Закреплённый чат</div>
-
-                  <button type="button" class="mkz-chat-item mkz-chat-item--owner" id="mkzPinnedOwnerChatBtn">
-                    <div class="mkz-chat-item__avatar" id="mkzPinnedOwnerAvatar">M</div>
-
-                    <div class="mkz-chat-item__body">
-                      <div class="mkz-chat-item__row">
-                        <div class="mkz-chat-item__name" id="mkzPinnedOwnerName">Mark1z Design</div>
-                        <div class="mkz-chat-item__time" id="mkzPinnedOwnerTime">онлайн</div>
-                      </div>
-                      <div class="mkz-chat-item__preview" id="mkzPinnedOwnerPreview">
-                        Привет! Напишите сообщение и оставьте контакты для связи.
-                      </div>
-                    </div>
-
-                    <div class="mkz-chat-item__badge" id="mkzPinnedOwnerUnread" style="display:none;">0</div>
+                  <div style="display: flex; justify-content: center; margin-bottom: 6px;"><div style="background: rgba(255,47,174,0.15); border: 1px solid rgba(255,47,174,0.3); border-radius: 60px; padding: 4px 16px; display: inline-block;"><span style="font-size: 10px; color: #ff2fae; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500;">📌 Закреплённый чат</span></div></div>
+                  <button type="button" class="mkz-dialog" id="mkzPinnedOwnerChatBtn" style="width: 100%; padding: 14px; border-radius: 16px; background: linear-gradient(135deg, rgba(255,47,174,0.08), rgba(122,60,255,0.08)); border: 1px solid rgba(255,47,174,0.3); text-align: left; cursor: pointer; margin-bottom: 8px;">
+                    <div style="display: flex; align-items: center; gap: 12px;"><div class="mkz-dialog__avatar" id="mkzPinnedOwnerAvatar" style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #ff2fae, #7a3cff); display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 18px; color: #fff;">M</div><div style="flex: 1; min-width: 0;"><div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-weight: 600; color: #fff;">Mark1z Design</span><span style="font-size: 11px; color: rgba(255,255,255,0.5);" id="mkzPinnedOwnerTime">онлайн</span></div><div style="font-size: 13px; color: rgba(255,255,255,0.6); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 3px;" id="mkzPinnedOwnerPreview">Загрузка...</div><div style="font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 2px;" id="mkzPinnedOwnerStatus">Чат поддержки</div></div></div>
                   </button>
                 </div>
               </div>
-
               <div class="mkz-chat-list" id="mkzMessengerDialogs"></div>
             </aside>
-
             <section class="mkz-messenger-main">
-              <div class="mkz-messenger-head" id="mkzMessengerTop">
-                <div class="mkz-messenger-user">
-                  <div class="mkz-messenger-user__avatar" id="mkzMessengerTopAvatar">💬</div>
-                  <div>
-                    <div class="mkz-messenger-user__name" id="mkzMessengerTopName">Мессенджер</div>
-                    <div class="mkz-messenger-user__status" id="mkzMessengerTopSub">Выберите чат, чтобы начать общение</div>
-                  </div>
-                </div>
-                <div class="mkz-messenger-head__actions">
-                </div>
-              </div>
-
-              <div class="mkz-messenger-messages" id="mkzMessengerMessages">
-                <div id="mkzMessengerEmptyState" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:rgba(255,255,255,0.5);text-align:center;padding:40px;">
-                     <div style="font-size:48px;margin-bottom:16px;">💬</div>
-                     <div style="font-size:18px;font-weight:600;color:#fff;margin-bottom:8px;">Ваши чаты</div>
-                    <div style="font-size:14px;">Выберите диалог слева или найдите друга чтобы начать общение</div>
-                  </div>
-                </div>
-
-              <!-- ПЕРЕКЛЮЧАТЕЛЬ РЕЖИМОВ ОТПРАВКИ (ДЛЯ АДМИНА) -->
-              <div id="mkzSupportModeSelector" class="mkz-support-mode-selector" style="display: none;">
-                <div class="mkz-support-mode-title">
-                  <span>🤖 Режим ответа</span>
-                </div>
-                <div class="mkz-support-mode-buttons">
-                  <button class="mkz-mode-btn mkz-mode-btn--brand is-active" data-mode="brand" id="mkzModeBrandBtn">
-                    <span>🏢</span>
-                    <div>
-                      <strong>Mark1z Design</strong>
-                      <small>Виден всем</small>
-                    </div>
-                  </button>
-                  <button class="mkz-mode-btn mkz-mode-btn--admin" data-mode="admin" id="mkzModeAdminBtn">
-                    <span>👤</span>
-                    <div>
-                      <strong>Админ (личное)</strong>
-                      <small>Только для админов</small>
-                    </div>
-                  </button>
-                </div>
-                <div class="mkz-support-mode-hint" id="mkzModeHint">
-                  💡 Посетители видят только сообщения от Mark1z Design
-                </div>
-              </div>
-
-              <form class="mkz-messenger-compose" id="mkzMessengerForm">
-                <div class="mkz-messenger-compose__box mkz-messenger-compose__box--final">
-                  <input type="file" id="mkzMessengerImageInput" accept="image/*" hidden>
-                  <input type="file" id="mkzMessengerFileInput" hidden>
-
-                  <button class="mkz-messenger-attach mkz-messenger-attach--file" type="button" id="mkzMessengerAttachFileBtn" title="Прикрепить файл">📎</button>
-
-                  <div class="mkz-messenger-compose__field">
-                    <textarea
-                      id="mkzMessengerInput"
-                      class="mkz-messenger-input"
-                      placeholder="Напиши сообщение..."
-                    ></textarea>
-                  </div>
-
-                  <button class="mkz-messenger-attach mkz-messenger-attach--voice" type="button" id="mkzMessengerVoiceBtn" title="Записать голосовое">🎤</button>
-                  <button class="mkz-messenger-attach mkz-messenger-attach--stop" type="button" id="mkzMessengerVoiceStopBtn" title="Остановить запись">⏹</button>
-
-                  <button class="mkz-messenger-send" type="submit" id="mkzMessengerSendBtn">Отправить</button>
-                </div>
-
-                <div class="mkz-news-composer__meta" id="mkzMessengerAttachMeta"></div>
-              </form>
+              <div class="mkz-messenger-head" id="mkzMessengerTop"><div class="mkz-messenger-user"><div class="mkz-messenger-user__avatar" id="mkzMessengerTopAvatar">💬</div><div><div class="mkz-messenger-user__name" id="mkzMessengerTopName">Мессенджер</div><div class="mkz-messenger-user__status" id="mkzMessengerTopSub">Выберите чат, чтобы начать общение</div></div></div><div class="mkz-messenger-head__actions"></div></div>
+              <div class="mkz-messenger-messages" id="mkzMessengerMessages"><div id="mkzMessengerEmptyState" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:rgba(255,255,255,0.5);text-align:center;padding:40px;"><div style="font-size:48px;margin-bottom:16px;">💬</div><div style="font-size:18px;font-weight:600;color:#fff;margin-bottom:8px;">Ваши чаты</div><div style="font-size:14px;">Выберите диалог слева или найдите друга чтобы начать общение</div></div></div>
+              <form class="mkz-messenger-compose" id="mkzMessengerForm"><div class="mkz-messenger-compose__box mkz-messenger-compose__box--final" style="display: flex; align-items: center; gap: 8px; width: 100%;"><input type="file" id="mkzMessengerImageInput" accept="image/*" hidden><input type="file" id="mkzMessengerFileInput" hidden><button class="mkz-messenger-attach mkz-messenger-attach--file" type="button" id="mkzMessengerAttachFileBtn" title="Прикрепить файл" style="width: 44px; height: 44px; flex-shrink: 0;">📎</button><div class="mkz-messenger-compose__field" style="flex: 1;"><textarea id="mkzMessengerInput" class="mkz-messenger-input" placeholder="Напиши сообщение..." style="width: 100%; margin: 0; box-sizing: border-box;"></textarea></div><button class="mkz-messenger-attach mkz-messenger-attach--voice" type="button" id="mkzMessengerVoiceBtn" title="Записать голосовое" style="width: 44px; height: 44px; flex-shrink: 0;">🎤</button><button class="mkz-messenger-send" type="submit" id="mkzMessengerSendBtn" style="min-width: 90px; height: 44px; flex-shrink: 0; background: linear-gradient(135deg, #ff2fae, #7a3cff); border: none; border-radius: 12px; color: #fff; font-weight: bold; cursor: pointer;">Отправить</button></div><div class="mkz-news-composer__meta" id="mkzMessengerAttachMeta"></div></form>
             </section>
           </div>
         </div>
@@ -636,34 +244,12 @@
 
     <!-- ========== УЧАСТНИКИ КОНКУРСОВ ========== -->
     <section class="mkz-screen" data-screen="participants" id="participants">
-      <section class="mkz-section">
-        <div class="mkz-container">
-          <div class="mkz-section__head">
-            <div class="mkz-chip">admin</div>
-            <h2>Участники конкурсов</h2>
-            <p>Список участников с почтой и Telegram username.</p>
-          </div>
-
-          <div class="mkz-form-card">
-            <div id="mkzContestEntriesAdminList"></div>
-          </div>
-        </div>
-      </section>
+      <section class="mkz-section"><div class="mkz-container"><div class="mkz-section__head"><div class="mkz-chip">admin</div><h2>Участники конкурсов</h2><p>Список участников с почтой и Telegram username.</p></div><div class="mkz-form-card"><div id="mkzContestEntriesAdminList"></div></div></div></section>
     </section>
 
     <!-- ========== ЭКРАН: СООБЩЕНИЯ В ПОДДЕРЖКУ ========== -->
     <section class="mkz-screen" data-screen="support-dialogs" id="support-dialogs">
-      <section class="mkz-section">
-        <div class="mkz-container">
-          <div class="mkz-section__head">
-            <div class="mkz-chip">support</div>
-            <h2>Сообщения в поддержку</h2>
-            <p>Все диалоги с посетителями, которые написали в чат Mark1z Design</p>
-          </div>
-          <div class="mkz-support-dialogs-list" id="mkzSupportDialogsList"></div>
-          <button class="mkz-btn mkz-btn--ghost" id="mkzBackToAdminBtn" type="button">← Назад к админ-панели</button>
-        </div>
-      </section>
+      <section class="mkz-section"><div class="mkz-container"><div class="mkz-section__head"><div class="mkz-chip">support</div><h2>Сообщения в поддержку</h2><p>Все диалоги с посетителями, которые написали в чат Mark1z Design</p></div><div class="mkz-support-dialogs-list" id="mkzSupportDialogsList"></div><button class="mkz-btn mkz-btn--ghost" id="mkzBackToAdminBtn" type="button">← Назад к админ-панели</button></div></section>
     </section>
 
     <!-- ========== АККАУНТ ========== -->
@@ -673,173 +259,25 @@
           <div class="mkz-account-side">
             <div class="mkz-chip">account</div>
             <h2>Аккаунт</h2>
-            
-            <!-- Мини-профиль -->
             <div class="mkz-person-card" style="margin-bottom:16px;display:flex;align-items:center;gap:14px;padding:18px;border-radius:24px;background:linear-gradient(180deg,rgba(20,12,38,.96),rgba(8,6,20,.98));border:1px solid rgba(255,255,255,.08);">
               <div class="mkz-person-card__avatar" id="mkzAccountMiniAvatar" style="width:70px;height:70px;border-radius:22px;background:linear-gradient(135deg,#ff3bd4,#8b5cff);display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;font-weight:800;background-size:cover;background-position:center;flex-shrink:0;">M</div>
-              <div class="mkz-person-card__meta" style="min-width:0;">
-                <div class="mkz-person-card__name" id="mkzAccountMiniName" style="font-size:22px;font-weight:800;color:#fff;">Гость</div>
-                <div class="mkz-person-card__id" id="mkzAccountMiniId" style="margin-top:6px;color:#b29cff;font-size:15px;font-weight:700;">ID: —</div>
-                <div class="mkz-person-card__status" id="mkzAccountMiniStatus" style="margin-top:8px;font-size:14px;color:rgba(255,255,255,.68);">Не в сети</div>
-              </div>
+              <div class="mkz-person-card__meta" style="min-width:0;"><div class="mkz-person-card__name" id="mkzAccountMiniName" style="font-size:22px;font-weight:800;color:#fff;">Гость</div><div class="mkz-person-card__id" id="mkzAccountMiniId" style="margin-top:6px;color:#b29cff;font-size:15px;font-weight:700;">ID: —</div><div class="mkz-person-card__status" id="mkzAccountMiniStatus" style="margin-top:8px;font-size:14px;color:rgba(255,255,255,.68);">Не в сети</div></div>
             </div>
-
-            <!-- Данные профиля -->
-            <div class="mkz-profile-facts" style="margin-bottom:16px;">
-              <div class="mkz-profile-fact">
-                <span class="mkz-profile-fact__label">Дата регистрации</span>
-                <div class="mkz-profile-fact__value" id="mkzAccountRegistered">—</div>
-              </div>
-              <div class="mkz-profile-fact">
-                <span class="mkz-profile-fact__label">Телефон</span>
-                <div class="mkz-profile-fact__value" id="mkzAccountPhone">—</div>
-              </div>
-              <div class="mkz-profile-fact">
-                <span class="mkz-profile-fact__label">Telegram</span>
-                <div class="mkz-profile-fact__value" id="mkzAccountTelegram">—</div>
-              </div>
-            </div>
-
-            <!-- Описание профиля -->
-            <div class="mkz-profile-description">
-              <label>📝 Описание профиля</label>
-              <textarea id="mkzUpdateBio" placeholder="Расскажите о себе..."></textarea>
-              <button id="mkzUpdateBioBtn" class="mkz-btn mkz-btn--primary" style="margin-top: 12px;">Сохранить описание</button>
-            </div>
-
-            <!-- Статистика -->
-            <div class="mkz-profile-stats" style="margin-bottom:16px;">
-              <div class="mkz-profile-stat"><strong>0</strong><span>Отзывов</span></div>
-              <div class="mkz-profile-stat"><strong>0</strong><span>Комментариев</span></div>
-            </div>
+            <div class="mkz-profile-facts" style="margin-bottom:16px;"><div class="mkz-profile-fact"><span class="mkz-profile-fact__label">Дата регистрации</span><div class="mkz-profile-fact__value" id="mkzAccountRegistered">—</div></div><div class="mkz-profile-fact"><span class="mkz-profile-fact__label">Телефон</span><div class="mkz-profile-fact__value" id="mkzAccountPhone">—</div></div><div class="mkz-profile-fact"><span class="mkz-profile-fact__label">Telegram</span><div class="mkz-profile-fact__value" id="mkzAccountTelegram">—</div></div></div>
+            <div class="mkz-profile-description"><label>📝 Описание профиля</label><textarea id="mkzUpdateBio" placeholder="Расскажите о себе..."></textarea><button id="mkzUpdateBioBtn" class="mkz-btn mkz-btn--primary" style="margin-top:12px;">Сохранить описание</button></div>
+            <div class="mkz-profile-stats" style="margin-bottom:16px;"><div class="mkz-profile-stat"><strong>0</strong><span>Отзывов</span></div><div class="mkz-profile-stat"><strong>0</strong><span>Комментариев</span></div></div>
           </div>
-
           <div class="mkz-form-card">
-            <div id="mkzAuthBlock">
-              <div class="mkz-auth-switch">
-                <button class="mkz-sort-btn is-active" id="mkzShowLogin" type="button">Вход</button>
-                <button class="mkz-sort-btn" id="mkzShowRegister" type="button">Регистрация</button>
-              </div>
-
-              <form id="mkzLoginForm" class="mkz-form">
-                <label class="mkz-field">
-                  <span>Email</span>
-                  <input type="email" id="mkzLoginEmail" autocomplete="email" required>
-                </label>
-                <label class="mkz-field">
-                  <span>Пароль</span>
-                  <input type="password" id="mkzLoginPassword" autocomplete="current-password" required>
-                </label>
-                <button class="mkz-btn mkz-btn--primary mkz-btn--block" type="submit" id="mkzLoginBtn">Войти</button>
-              </form>
-
-              <form id="mkzRegisterForm" class="mkz-form" style="display:none;">
-                <label class="mkz-field">
-                  <span>Email</span>
-                  <input type="email" id="mkzRegisterEmail" autocomplete="email" required>
-                </label>
-                <label class="mkz-field">
-                  <span>Пароль</span>
-                  <input type="password" id="mkzRegisterPassword" autocomplete="new-password" required>
-                </label>
-                <label class="mkz-field">
-                  <span>Никнейм</span>
-                  <input type="text" id="mkzNameInput" autocomplete="username" required>
-                </label>
-                <label class="mkz-field">
-                  <span>Телефон</span>
-                  <input type="text" id="mkzPhoneInput" autocomplete="tel">
-                </label>
-
-                <!-- ПОЛЯ ДЛЯ TELEGRAM И VK -->
-                <div class="mkz-social-inputs">
-                  <div class="mkz-field">
-                    <span>📱 Telegram username</span>
-                    <input type="text" id="mkzTelegramInput" placeholder="@username или username">
-                    <small>Укажите ваш Telegram username</small>
-                  </div>
-                  <div class="mkz-field">
-                    <span>📘 ВКонтакте</span>
-                    <input type="text" id="mkzVkUsername" placeholder="https://vk.com/id123 или username">
-                    <small>Ссылка на страницу или ID</small>
-                  </div>
-                </div>
-                <div id="mkzSocialError" class="mkz-social-error"></div>
-
-                <label class="mkz-field">
-                  <span>Аватарка</span>
-                  <input type="file" id="mkzAvatarInput" accept="image/*">
-                </label>
-                <button class="mkz-btn mkz-btn--primary mkz-btn--block" type="submit" id="mkzRegisterBtn">Зарегистрироваться</button>
-              </form>
-            </div>
-
-            <div class="mkz-profile-preview" id="mkzProfilePreview">
-              <div class="mkz-profile-preview__avatar" id="mkzPreviewAvatar">M</div>
-              <div class="mkz-profile-preview__label">Активный профиль</div>
-              <div class="mkz-profile-preview__name" id="mkzPreviewName">Гость</div>
-              <div class="mkz-profile-preview__phone" id="mkzPreviewPhone">Не авторизован</div>
-              <div class="mkz-profile-preview__phone" id="mkzPreviewUserId">ID: —</div>
-            </div>
-
+            <div id="mkzAuthBlock"><div class="mkz-auth-switch"><button class="mkz-sort-btn is-active" id="mkzShowLogin" type="button">Вход</button><button class="mkz-sort-btn" id="mkzShowRegister" type="button">Регистрация</button></div>
+            <form id="mkzLoginForm" class="mkz-form"><label class="mkz-field"><span>Email</span><input type="email" id="mkzLoginEmail" autocomplete="email" required></label><label class="mkz-field"><span>Пароль</span><input type="password" id="mkzLoginPassword" autocomplete="current-password" required></label><button class="mkz-btn mkz-btn--primary mkz-btn--block" type="submit" id="mkzLoginBtn">Войти</button></form>
+            <form id="mkzRegisterForm" class="mkz-form" style="display:none;"><label class="mkz-field"><span>Email</span><input type="email" id="mkzRegisterEmail" autocomplete="email" required></label><label class="mkz-field"><span>Пароль</span><input type="password" id="mkzRegisterPassword" autocomplete="new-password" required></label><label class="mkz-field"><span>Никнейм</span><input type="text" id="mkzNameInput" autocomplete="username" required></label><label class="mkz-field"><span>Телефон</span><input type="text" id="mkzPhoneInput" autocomplete="tel"></label><div class="mkz-social-inputs"><div class="mkz-field"><span>📱 Telegram username</span><input type="text" id="mkzTelegramInput" placeholder="@username или username"><small>Укажите ваш Telegram username</small></div><div class="mkz-field"><span>📘 ВКонтакте</span><input type="text" id="mkzVkUsername" placeholder="https://vk.com/id123 или username"><small>Ссылка на страницу или ID</small></div></div><div id="mkzSocialError" class="mkz-social-error"></div><label class="mkz-field"><span>Аватарка</span><input type="file" id="mkzAvatarInput" accept="image/*"></label><button class="mkz-btn mkz-btn--primary mkz-btn--block" type="submit" id="mkzRegisterBtn">Зарегистрироваться</button></form></div>
+            <div class="mkz-profile-preview" id="mkzProfilePreview"><div class="mkz-profile-preview__avatar" id="mkzPreviewAvatar">M</div><div class="mkz-profile-preview__label">Активный профиль</div><div class="mkz-profile-preview__name" id="mkzPreviewName">Гость</div><div class="mkz-profile-preview__phone" id="mkzPreviewPhone">Не авторизован</div><div class="mkz-profile-preview__phone" id="mkzPreviewUserId">ID: —</div></div>
             <div class="mkz-account-actions" id="mkzAccountActions" style="display:none;">
-              <label class="mkz-field">
-                <span>Обновить никнейм</span>
-                <input type="text" id="mkzUpdateName" autocomplete="username">
-              </label>
-              <label class="mkz-field">
-                <span>Обновить телефон</span>
-                <input type="text" id="mkzUpdatePhone" autocomplete="tel">
-              </label>
-              <label class="mkz-field">
-                <span>Обновить Telegram username</span>
-                <input type="text" id="mkzUpdateTelegram" placeholder="@username">
-              </label>
-              <label class="mkz-field">
-                <span>Новая аватарка</span>
-                <input type="file" id="mkzUpdateAvatar" accept="image/*">
-              </label>
-
-              <div class="mkz-profile-card" id="mkzPrivacySettingsCard">
-                <div class="mkz-profile-card__label">Приватность</div>
-                <h3 class="mkz-profile-card__title">Настройки отображения</h3>
-
-                <div class="mkz-privacy-box">
-                  <label class="mkz-privacy-item">
-                    <div class="mkz-privacy-item__text">
-                      <div class="mkz-privacy-item__title">Показывать номер телефона</div>
-                      <div class="mkz-privacy-item__desc">Другие пользователи смогут видеть твой телефон в профиле.</div>
-                    </div>
-                    <span class="mkz-switch">
-                      <input type="checkbox" id="mkzPrivacyShowPhone">
-                      <span class="mkz-switch__slider"></span>
-                    </span>
-                  </label>
-
-                  <label class="mkz-privacy-item">
-                    <div class="mkz-privacy-item__text">
-                      <div class="mkz-privacy-item__title">Показывать Telegram аккаунт</div>
-                      <div class="mkz-privacy-item__desc">Твой Telegram username будет отображаться в профиле.</div>
-                    </div>
-                    <span class="mkz-switch">
-                      <input type="checkbox" id="mkzPrivacyShowTelegram">
-                      <span class="mkz-switch__slider"></span>
-                    </span>
-                  </label>
-
-                  <label class="mkz-privacy-item">
-                    <div class="mkz-privacy-item__text">
-                      <div class="mkz-privacy-item__title">Показывать статус в сети</div>
-                      <div class="mkz-privacy-item__desc">Другие будут видеть, когда ты был в сети.</div>
-                    </div>
-                    <span class="mkz-switch">
-                      <input type="checkbox" id="mkzPrivacyShowLastSeen">
-                      <span class="mkz-switch__slider"></span>
-                    </span>
-                  </label>
-                </div>
-              </div>
-
+              <label class="mkz-field"><span>Обновить никнейм</span><input type="text" id="mkzUpdateName" autocomplete="username"></label>
+              <label class="mkz-field"><span>Обновить телефон</span><input type="text" id="mkzUpdatePhone" autocomplete="tel"></label>
+              <label class="mkz-field"><span>Обновить Telegram username</span><input type="text" id="mkzUpdateTelegram" placeholder="@username"></label>
+              <label class="mkz-field"><span>Новая аватарка</span><input type="file" id="mkzUpdateAvatar" accept="image/*"></label>
+              <div class="mkz-profile-card" id="mkzPrivacySettingsCard"><div class="mkz-profile-card__label">Приватность</div><h3 class="mkz-profile-card__title">Настройки отображения</h3><div class="mkz-privacy-box"><label class="mkz-privacy-item"><div class="mkz-privacy-item__text"><div class="mkz-privacy-item__title">Показывать номер телефона</div><div class="mkz-privacy-item__desc">Другие пользователи смогут видеть твой телефон в профиле.</div></div><span class="mkz-switch"><input type="checkbox" id="mkzPrivacyShowPhone"><span class="mkz-switch__slider"></span></span></label><label class="mkz-privacy-item"><div class="mkz-privacy-item__text"><div class="mkz-privacy-item__title">Показывать Telegram аккаунт</div><div class="mkz-privacy-item__desc">Твой Telegram username будет отображаться в профиле.</div></div><span class="mkz-switch"><input type="checkbox" id="mkzPrivacyShowTelegram"><span class="mkz-switch__slider"></span></span></label><label class="mkz-privacy-item"><div class="mkz-privacy-item__text"><div class="mkz-privacy-item__title">Показывать статус в сети</div><div class="mkz-privacy-item__desc">Другие будут видеть, когда ты был в сети.</div></div><span class="mkz-switch"><input type="checkbox" id="mkzPrivacyShowLastSeen"><span class="mkz-switch__slider"></span></span></label></div></div>
               <button class="mkz-btn mkz-btn--ghost mkz-btn--block" type="button" id="mkzUpdateProfileBtn">Обновить профиль</button>
               <button class="mkz-btn mkz-btn--accent mkz-btn--block" type="button" id="mkzLogoutBtn">Выйти из аккаунта</button>
             </div>
@@ -850,121 +288,19 @@
   </main>
 
   <footer class="mkz-footer">
-    <div class="mkz-container mkz-footer__inner">
-      <div>
-        <div class="mkz-footer__title">Mark1z Design</div>
-        <div class="mkz-footer__text">Авторский дизайн, интерфейсы, визуал и контент.</div>
-      </div>
-      <div class="mkz-footer__links">
-        <a href="https://vk.com/mark1zdzn" target="_blank" rel="noopener noreferrer">Группа VK</a>
-        <a href="https://t.me/Mark1zdzn" target="_blank" rel="noopener noreferrer">Группа ТГК</a>
-      </div>
-    </div>
+    <div class="mkz-container mkz-footer__inner"><div><div class="mkz-footer__title">Mark1z Design</div><div class="mkz-footer__text">Авторский дизайн, интерфейсы, визуал и контент.</div></div><div class="mkz-footer__links"><a href="https://vk.com/mark1zdzn" target="_blank" rel="noopener noreferrer">Группа VK</a><a href="https://t.me/Mark1zdzn" target="_blank" rel="noopener noreferrer">Группа ТГК</a></div></div>
   </footer>
 
   <!-- МОДАЛЬНЫЕ ОКНА -->
-  <div class="mkz-modal" id="mkzOrderModal">
-    <div class="mkz-modal__backdrop" id="mkzOrderBackdrop"></div>
-    <div class="mkz-modal__dialog">
-      <button class="mkz-modal__close" id="mkzCloseOrderModal" type="button">×</button>
-      <div class="mkz-chip">заказать</div>
-      <h3>Где оформить заказ?</h3>
-      <p>Выбери удобный способ связи.</p>
-      <div class="mkz-order-actions">
-        <a class="mkz-btn mkz-btn--primary mkz-btn--block mkz-link-white" href="https://t.me/Mark1zell" target="_blank" rel="noopener noreferrer">Заказать в Telegram</a>
-        <a class="mkz-btn mkz-btn--ghost mkz-btn--block mkz-link-white" href="https://vk.com/mark1zyyy" target="_blank" rel="noopener noreferrer">Заказать в VK</a>
-        <a class="mkz-btn mkz-btn--accent mkz-btn--block mkz-link-white" href="https://www.tbank.ru/cf/9EuvMKZvQph" target="_blank" rel="noopener noreferrer">Оплатить через Т-Банк</a>
-      </div>
-    </div>
-  </div>
+  <div class="mkz-modal" id="mkzOrderModal"><div class="mkz-modal__backdrop" id="mkzOrderBackdrop"></div><div class="mkz-modal__dialog"><button class="mkz-modal__close" id="mkzCloseOrderModal" type="button">×</button><div class="mkz-chip">заказать</div><h3>Где оформить заказ?</h3><p>Выбери удобный способ связи.</p><div class="mkz-order-actions"><a class="mkz-btn mkz-btn--primary mkz-btn--block mkz-link-white" href="https://t.me/Mark1zell" target="_blank" rel="noopener noreferrer">Заказать в Telegram</a><a class="mkz-btn mkz-btn--ghost mkz-btn--block mkz-link-white" href="https://vk.com/mark1zyyy" target="_blank" rel="noopener noreferrer">Заказать в VK</a><a class="mkz-btn mkz-btn--accent mkz-btn--block mkz-link-white" href="https://www.tbank.ru/cf/9EuvMKZvQph" target="_blank" rel="noopener noreferrer">Оплатить через Т-Банк</a></div></div></div>
+  <div class="mkz-modal" id="mkzReviewPopup"><div class="mkz-modal__backdrop" id="mkzReviewPopupBackdrop"></div><div class="mkz-modal__dialog mkz-modal__dialog--wide"><button class="mkz-modal__close" id="mkzCloseReviewPopup" type="button">×</button><div class="mkz-popup-review" id="mkzPopupReviewContent"></div></div></div>
+  <div class="mkz-modal" id="mkzImageModal"><div class="mkz-modal__backdrop" id="mkzImageModalBackdrop"></div><div class="mkz-modal__dialog mkz-modal__dialog--wide"><button class="mkz-modal__close" id="mkzCloseImageModal" type="button">×</button><div class="mkz-popup-image-wrap" id="mkzPopupImageWrap"></div><div class="mkz-popup-image-title" id="mkzPopupImageTitle"></div></div></div>
 
-  <div class="mkz-modal" id="mkzReviewPopup">
-    <div class="mkz-modal__backdrop" id="mkzReviewPopupBackdrop"></div>
-    <div class="mkz-modal__dialog mkz-modal__dialog--wide">
-      <button class="mkz-modal__close" id="mkzCloseReviewPopup" type="button">×</button>
-      <div class="mkz-popup-review" id="mkzPopupReviewContent"></div>
-    </div>
-  </div>
-
-  <div class="mkz-modal" id="mkzImageModal">
-    <div class="mkz-modal__backdrop" id="mkzImageModalBackdrop"></div>
-    <div class="mkz-modal__dialog mkz-modal__dialog--wide">
-      <button class="mkz-modal__close" id="mkzCloseImageModal" type="button">×</button>
-      <div class="mkz-popup-image-wrap" id="mkzPopupImageWrap"></div>
-      <div class="mkz-popup-image-title" id="mkzPopupImageTitle"></div>
-    </div>
-  </div>
-
-  <!-- ПЛАВАЮЩИЕ КНОПКИ -->
-  <button class="mkz-faq-fab" id="mkzFaqFab" type="button" aria-label="Открыть FAQ">?</button>
-  <button class="mkz-chat-fab" id="mkzChatFab" type="button" aria-label="Открыть связь">✉</button>
-
-  <!-- НИЖНЯЯ НАВИГАЦИЯ -->
-  <nav class="mkz-bottom-nav">
-    <button class="mkz-bottom-nav__item is-active" data-screen-open="home" type="button">Главная</button>
-    <button class="mkz-bottom-nav__item" data-screen-open="portfolio" type="button">Портфолио</button>
-    <button class="mkz-bottom-nav__item" data-screen-open="reviews" type="button">Отзывы</button>
-    <button class="mkz-bottom-nav__item" data-screen-open="feed" type="button">Лента</button>
-    <button class="mkz-bottom-nav__item" data-screen-open="faq" type="button">FAQ</button>
-    <button class="mkz-bottom-nav__item" data-screen-open="people" type="button">Друзья</button>
-    <button class="mkz-bottom-nav__item" data-screen-open="messenger" type="button">Чаты</button>
-    <button class="mkz-bottom-nav__item" data-screen-open="account" type="button">Аккаунт</button>
-    <button class="mkz-bottom-nav__item mkz-admin-only" id="mkzParticipantsBottomBtn" data-screen-open="participants" type="button" style="display:none;">Участники</button>
-  </nav>
-</section>
-</section>
-  </main>
-
-  <footer class="mkz-footer">
-    <div class="mkz-container mkz-footer__inner">
-      <div>
-        <div class="mkz-footer__title">Mark1z Design</div>
-        <div class="mkz-footer__text">Авторский дизайн, интерфейсы, визуал и контент.</div>
-      </div>
-      <div class="mkz-footer__links">
-        <a href="https://vk.com/mark1zdzn" target="_blank" rel="noopener noreferrer">Группа VK</a>
-        <a href="https://t.me/Mark1zdzn" target="_blank" rel="noopener noreferrer">Группа ТГК</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- МОДАЛЬНЫЕ ОКНА -->
-  <div class="mkz-modal" id="mkzOrderModal">
-    <div class="mkz-modal__backdrop" id="mkzOrderBackdrop"></div>
-    <div class="mkz-modal__dialog">
-      <button class="mkz-modal__close" id="mkzCloseOrderModal" type="button">×</button>
-      <div class="mkz-chip">заказать</div>
-      <h3>Где оформить заказ?</h3>
-      <p>Выбери удобный способ связи.</p>
-      <div class="mkz-order-actions">
-        <a class="mkz-btn mkz-btn--primary mkz-btn--block mkz-link-white" href="https://t.me/Mark1zell" target="_blank" rel="noopener noreferrer">Заказать в Telegram</a>
-        <a class="mkz-btn mkz-btn--ghost mkz-btn--block mkz-link-white" href="https://vk.com/mark1zyyy" target="_blank" rel="noopener noreferrer">Заказать в VK</a>
-        <a class="mkz-btn mkz-btn--accent mkz-btn--block mkz-link-white" href="https://www.tbank.ru/cf/9EuvMKZvQph" target="_blank" rel="noopener noreferrer">Оплатить через Т-Банк</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="mkz-modal" id="mkzReviewPopup">
-    <div class="mkz-modal__backdrop" id="mkzReviewPopupBackdrop"></div>
-    <div class="mkz-modal__dialog mkz-modal__dialog--wide">
-      <button class="mkz-modal__close" id="mkzCloseReviewPopup" type="button">×</button>
-      <div class="mkz-popup-review" id="mkzPopupReviewContent"></div>
-    </div>
-  </div>
-
-  <div class="mkz-modal" id="mkzImageModal">
-    <div class="mkz-modal__backdrop" id="mkzImageModalBackdrop"></div>
-    <div class="mkz-modal__dialog mkz-modal__dialog--wide">
-      <button class="mkz-modal__close" id="mkzCloseImageModal" type="button">×</button>
-      <div class="mkz-popup-image-wrap" id="mkzPopupImageWrap"></div>
-      <div class="mkz-popup-image-title" id="mkzPopupImageTitle"></div>
-    </div>
-  </div>
-
-  <!-- ПЛАВАЮЩИЕ КНОПКИ -->
   <button class="mkz-faq-fab" id="mkzFaqFab" type="button" aria-label="Открыть FAQ">?</button>
   <button class="mkz-chat-fab" id="mkzChatFab" type="button" aria-label="Открыть связь">✉</button>
 
 <script src="mark1zmain2.js"></script>
+</body>
+</html>
 </body>
 </html>
