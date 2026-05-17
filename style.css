@@ -1926,27 +1926,30 @@ body, .mkz-site {
 
 
 
-/* Фикс аватарки в публичном профиле — ширина и высота */
+/* Увеличиваем аватарку в публичном профиле */
 .mkz-profile-view .mkz-profile-avatar {
-  width: 240px !important;
-  min-width: 240px !important;
-  max-width: 240px !important;
+  width: 220px !important;
   height: auto !important;
-  border-radius: 32px !important;
-  overflow: hidden;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  align-self: stretch !important;
 }
 
 .mkz-profile-view .mkz-profile-card__avatar {
-  width: 100% !important;
-  height: auto !important;
-  min-height: 240px;
+  width: 220px;
+  min-height: 220px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 90px;
-  background-size: cover !important;
-  background-position: center !important;
+}
+
+/* Чтобы аватарка растягивалась по высоте правого блока */
+.mkz-profile-hero > div:first-child {
+  align-items: stretch !important;
+}
+
+.mkz-profile-avatar {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
 }
