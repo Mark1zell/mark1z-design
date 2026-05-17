@@ -1917,3 +1917,36 @@ body, .mkz-site {
 .mkz-person-card__status {
   color: rgba(255,255,255,0.68) !important;
 }
+
+
+
+
+
+
+
+
+
+/* Фикс аватарки в публичном профиле — ширина и высота */
+.mkz-profile-view .mkz-profile-avatar {
+  width: 240px !important;
+  min-width: 240px !important;
+  max-width: 240px !important;
+  height: auto !important;
+  border-radius: 32px !important;
+  overflow: hidden;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.mkz-profile-view .mkz-profile-card__avatar {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 90px;
+  background-size: cover !important;
+  background-position: center !important;
+}
