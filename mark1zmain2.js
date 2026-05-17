@@ -1147,7 +1147,25 @@ async function renderPortfolio() {
   function hideImageModal() { if (!imageModal) return; imageModal.classList.remove('is-open'); if (popupImageWrap) popupImageWrap.innerHTML = ''; if (popupImageTitle) popupImageTitle.textContent = ''; document.body.style.overflow = ''; }
   function showReviewPopup(review) { if (!reviewPopup || !popupReviewContent) return; const username = safeText(review.profile?.username || 'Пользователь', 'Пользователь'); const text = nl2brSafe(review.text || ''); const avatarUrl = safeUrl(review.profile?.avatar_url || ''); const imageUrl = safeUrl(review.image_url || ''); popupReviewContent.innerHTML = `<div class="mkz-popup-review__top"><div class="mkz-review-author__avatar" style="${avatarUrl ? `background-image:url('${avatarUrl}');background-size:cover;background-position:center;` : ''}">${avatarUrl ? '' : getInitial(review.profile?.username, 'Г')}</div><div><div class="mkz-popup-review__name">${username}</div><div class="mkz-popup-review__stars">${'★'.repeat(Number(review.rating || 0))}${'☆'.repeat(5 - Number(review.rating || 0))}</div></div></div><div class="mkz-popup-review__text">${text}</div>${imageUrl ? `<div class="mkz-popup-review__image"><img src="${imageUrl}" alt="Отзыв"></div>` : ''}`; reviewPopup.classList.add('is-open'); document.body.style.overflow = 'hidden'; }
   function hideReviewPopup() { if (!reviewPopup) return; reviewPopup.classList.remove('is-open'); document.body.style.overflow = ''; }
-  function openScreen(name) { screens.forEach(screen => { screen.classList.toggle('mkz-screen--active', screen.dataset.screen === name); }); $$('.mkz-nav__link, .mkz-bottom-nav__item').forEach(btn => { btn.classList.toggle('is-active', btn.dataset.screenOpen === name); }); if (nav) nav.classList.remove('is-open'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  function openScreen(name) {
+  screens.forEach(screen => {
+    screen.classList.toggle('mkz-screen--active', screen.dataset.screen === name);
+  });
+  $$('.mkz-nav__link, .mkz-bottom-nav__item').forEach(btn => {
+    btn.classList.toggle('is-active', btn.dataset.screenOpen === name);
+  });
+  if (nav) nav.classList.remove('is-open');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  
+  // ПРИ ОТКРЫТИИ МЕССЕНДЖЕРА — ПРИНУДИТЕЛЬНО РЕНДЕРИМ ДИАЛОГИ
+  if (name === 'messenger') {
+    setTimeout(async () => {
+      if (state.currentSession?.user) {
+        await renderMessengerDialogs();
+      }
+    }, 200);
+  }
+}
   function showOrderModal() { if (!orderModal) return; orderModal.classList.add('is-open'); document.body.style.overflow = 'hidden'; }
   function hideOrderModal() { if (!orderModal) return; orderModal.classList.remove('is-open'); document.body.style.overflow = ''; }
 
@@ -2472,8 +2490,6 @@ setTimeout(() => {
   }
 
 // ========== REAL-TIME ОБНОВЛЕНИЕ СПИСКА ДИАЛОГОВ ==========
-let realtimeSubscription = null;
-
 async function initRealtimeDialogs() {
   if (!state.currentSession?.user) return;
   
